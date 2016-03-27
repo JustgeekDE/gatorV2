@@ -1342,33 +1342,33 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="XOR4" library="p.peter-logic" package="XOR-2-EX2" value="XOR" x="21.75" y="6.5"/>
-<element name="NOT2" library="p.peter-logic" package="NOT-VERTICAL" value="NOT-VERTICAL" x="34" y="27" rot="R180"/>
+<element name="XOR4" library="p.peter-logic" package="XOR-2-EX2" value="XOR" x="22.75" y="7"/>
+<element name="NOT2" library="p.peter-logic" package="NOT-VERTICAL" value="NOT-VERTICAL" x="35.5" y="28.5" rot="R180"/>
 <element name="SEL1" library="p.peter-logic" package="SELECTOR-8_BIT-NOMUX" value="SELECTOR" x="0" y="36"/>
-<element name="OR2" library="p.peter-logic" package="OR-2" value="OR" x="32.5" y="6.5"/>
-<element name="SEL2" library="p.peter-logic" package="SELECTOR-2-LANE-NOMUX" value="" x="38.5" y="15"/>
-<element name="NAND1" library="p.peter-logic" package="NAND-2" value="NAND" x="32.5" y="17.5"/>
-<element name="SEL3" library="p.peter-logic" package="SELECTOR-2-LANE-NOMUX" value="" x="38.5" y="0"/>
-<element name="XOR1" library="p.peter-gator" package="XOR" value="XOR" x="0" y="0"/>
-<element name="XOR2" library="p.peter-gator" package="XOR" value="XOR" x="0" y="13"/>
-<element name="XOR3" library="p.peter-gator" package="XOR" value="XOR" x="14.5" y="13"/>
-<element name="NOT1" library="p.peter-gator" package="NOT-VERTICAL" value="NOTVERTICAL" x="0" y="26"/>
-<element name="OR1" library="p.peter-gator" package="OR" value="OR" x="17" y="26" rot="R90"/>
+<element name="OR2" library="p.peter-logic" package="OR-2" value="OR" x="34" y="7"/>
+<element name="SEL2" library="p.peter-logic" package="SELECTOR-2-LANE-NOMUX" value="" x="38" y="16"/>
+<element name="NAND1" library="p.peter-logic" package="NAND-2" value="NAND" x="34" y="18.5"/>
+<element name="SEL3" library="p.peter-logic" package="SELECTOR-2-LANE-NOMUX" value="" x="38" y="0.5"/>
+<element name="XOR1" library="p.peter-gator" package="XOR" value="XOR" x="0.5" y="0.5"/>
+<element name="XOR2" library="p.peter-gator" package="XOR" value="XOR" x="0.5" y="14"/>
+<element name="XOR3" library="p.peter-gator" package="XOR" value="XOR" x="15.5" y="14"/>
+<element name="NOT1" library="p.peter-gator" package="NOT-VERTICAL" value="NOTVERTICAL" x="0.5" y="27.5"/>
+<element name="OR1" library="p.peter-gator" package="OR" value="OR" x="17.5" y="27.5" rot="R90"/>
 </elements>
 <signals>
 <signal name="A">
 <contactref element="SEL1" pad="IN1"/>
 <contactref element="SEL3" pad="IN2"/>
 <contactref element="XOR2" pad="A"/>
-<wire x1="12.3" y1="13" x2="39.5" y2="2.7" width="0" layer="19" extent="1-1"/>
-<wire x1="3.4" y1="36.7" x2="12.3" y2="13" width="0" layer="19" extent="1-1"/>
+<wire x1="12.8" y1="14" x2="39" y2="3.2" width="0" layer="19" extent="1-1"/>
+<wire x1="3.4" y1="36.7" x2="12.8" y2="14" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XOR">
 <contactref element="SEL1" pad="IN4"/>
 <contactref element="XOR3" pad="B"/>
 <contactref element="XOR2" pad="XOR"/>
-<wire x1="10.6" y1="26" x2="16.6" y2="36.7" width="0" layer="19" extent="1-1"/>
-<wire x1="14.5" y1="15.9" x2="10.6" y2="26" width="0" layer="19" extent="1-1"/>
+<wire x1="11.1" y1="27" x2="16.6" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="15.5" y1="16.9" x2="11.1" y2="27" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CARRY_IN">
 <contactref element="XOR3" pad="A"/>
@@ -1377,8 +1377,8 @@ design rules under a new name.</description>
 <contactref element="SEL1" pad="IN5"/>
 <contactref element="OR2" pad="A"/>
 <contactref element="OR1" pad="OR"/>
-<wire x1="4.5" y1="30" x2="21" y2="36.7" width="0" layer="19" extent="1-1"/>
-<wire x1="32" y1="0.7" x2="21" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="5" y1="31.5" x2="21" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="33.5" y1="1.2" x2="21" y2="36.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CARRY">
 <contactref element="XOR3" pad="XOR"/>
@@ -1389,10 +1389,10 @@ design rules under a new name.</description>
 <contactref element="NOT1" pad="V+"/>
 <contactref element="XOR3" pad="V+"/>
 <contactref element="OR1" pad="V+"/>
-<wire x1="4.5" y1="32" x2="15.6" y2="26" width="0" layer="19" extent="1-1"/>
-<wire x1="3" y1="34.5" x2="4.5" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="1.1" y1="26" x2="4.5" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="1.1" y1="13" x2="1.1" y2="26" width="0" layer="19" extent="1-1"/>
+<wire x1="5" y1="33.5" x2="16.6" y2="27" width="0" layer="19" extent="1-1"/>
+<wire x1="3.5" y1="36" x2="5" y2="33.5" width="0" layer="19" extent="1-1"/>
+<wire x1="1.6" y1="27" x2="5" y2="33.5" width="0" layer="19" extent="1-1"/>
+<wire x1="1.6" y1="13.5" x2="1.6" y2="27" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="XOR1" pad="V-"/>
@@ -1400,35 +1400,35 @@ design rules under a new name.</description>
 <contactref element="NOT1" pad="V-"/>
 <contactref element="XOR3" pad="V-"/>
 <contactref element="OR1" pad="V-"/>
-<wire x1="13.5" y1="26" x2="28" y2="26" width="0" layer="19" extent="1-1"/>
-<wire x1="4.5" y1="31" x2="13.5" y2="26" width="0" layer="19" extent="1-1"/>
-<wire x1="2" y1="34.5" x2="4.5" y2="31" width="0" layer="19" extent="1-1"/>
-<wire x1="13.5" y1="13" x2="13.5" y2="26" width="0" layer="19" extent="1-1"/>
+<wire x1="14" y1="27" x2="29" y2="27" width="0" layer="19" extent="1-1"/>
+<wire x1="5" y1="32.5" x2="14" y2="27" width="0" layer="19" extent="1-1"/>
+<wire x1="2.5" y1="36" x2="5" y2="32.5" width="0" layer="19" extent="1-1"/>
+<wire x1="14" y1="13.5" x2="14" y2="27" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="NOR">
 <contactref element="SEL1" pad="IN3"/>
 <contactref element="XOR2" pad="NOR"/>
-<wire x1="5.5" y1="26" x2="12.2" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="6" y1="27" x2="12.2" y2="36.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="NAND">
 <contactref element="SEL1" pad="IN2"/>
 <contactref element="NOT1" pad="NOT"/>
-<wire x1="1" y1="34.5" x2="7.8" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="1.5" y1="36" x2="7.8" y2="36.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="B_INT">
 <contactref element="XOR1" pad="XOR"/>
 <contactref element="XOR2" pad="B"/>
-<wire x1="0" y1="15.9" x2="10.6" y2="13" width="0" layer="19" extent="1-1"/>
+<wire x1="0.5" y1="16.9" x2="11.1" y2="13.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="B">
 <contactref element="SEL1" pad="IN8"/>
 <contactref element="XOR1" pad="A"/>
-<wire x1="12.3" y1="0" x2="34.2" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="12.8" y1="0.5" x2="34.2" y2="36.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OUT">
 <contactref element="XOR4" pad="A"/>
 <contactref element="SEL1" pad="OUT"/>
-<wire x1="16.5" y1="0.7" x2="36.8" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="17.5" y1="1.2" x2="36.8" y2="36.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OUT_INV">
 <contactref element="XOR4" pad="OUT4"/>
@@ -1436,7 +1436,7 @@ design rules under a new name.</description>
 <signal name="INV_OUT">
 <contactref element="SEL2" pad="SEL"/>
 <contactref element="NOT2" pad="IN"/>
-<wire x1="39.5" y1="15.7" x2="33" y2="31.3" width="0" layer="19" extent="1-1"/>
+<wire x1="39" y1="16.7" x2="34.5" y2="32.8" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="INV_ADD">
 <contactref element="XOR1" pad="B"/>
@@ -1445,8 +1445,8 @@ design rules under a new name.</description>
 <contactref element="SEL2" pad="IN1"/>
 <contactref element="SEL1" pad="IN7"/>
 <contactref element="SEL3" pad="IN1"/>
-<wire x1="39.5" y1="16.7" x2="29.8" y2="36.7" width="0" layer="19" extent="1-1"/>
-<wire x1="39.5" y1="1.7" x2="39.5" y2="16.7" width="0" layer="19" extent="1-1"/>
+<wire x1="39" y1="17.7" x2="29.8" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="39" y1="2.2" x2="39" y2="17.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SEL_ID">
 <contactref element="SEL1" pad="SEL1"/>
@@ -1466,12 +1466,12 @@ design rules under a new name.</description>
 <signal name="SEL_SHIFT">
 <contactref element="SEL1" pad="SEL6"/>
 <contactref element="NAND1" pad="A"/>
-<wire x1="32" y1="13.7" x2="23.2" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="33.5" y1="14.7" x2="23.2" y2="36.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SEL_CMP">
 <contactref element="SEL1" pad="SEL7"/>
 <contactref element="SEL3" pad="SEL"/>
-<wire x1="39.5" y1="0.7" x2="27.6" y2="36.7" width="0" layer="19" extent="1-1"/>
+<wire x1="39" y1="1.2" x2="27.6" y2="36.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SEL_LOAD">
 <contactref element="SEL1" pad="SEL8"/>
@@ -1485,7 +1485,7 @@ design rules under a new name.</description>
 <signal name="N$3">
 <contactref element="SEL1" pad="IN6"/>
 <contactref element="SEL2" pad="OUT"/>
-<wire x1="25.4" y1="36.7" x2="48.5" y2="15.7" width="0" layer="19" extent="1-1"/>
+<wire x1="25.4" y1="36.7" x2="48" y2="16.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RIGHT_IN">
 <contactref element="SEL2" pad="IN2"/>
@@ -1493,12 +1493,12 @@ design rules under a new name.</description>
 <signal name="N$4">
 <contactref element="NAND1" pad="OUT2"/>
 <contactref element="XOR4" pad="B"/>
-<wire x1="25.5" y1="0.7" x2="34" y2="21" width="0" layer="19" extent="1-1"/>
+<wire x1="26.5" y1="1.2" x2="35.5" y2="22" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
 <contactref element="NAND1" pad="B"/>
 <contactref element="NOT2" pad="OUT1"/>
-<wire x1="35" y1="13.7" x2="35" y2="22.7" width="0" layer="19" extent="1-1"/>
+<wire x1="36.5" y1="14.7" x2="36.5" y2="24.2" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RIGHT_OUT">
 <contactref element="SEL3" pad="OUT"/>
@@ -1507,13 +1507,13 @@ design rules under a new name.</description>
 <contactref element="OR1" pad="B"/>
 <contactref element="XOR2" pad="AND"/>
 <contactref element="NOT1" pad="A"/>
-<wire x1="2" y1="26" x2="17" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="0" y1="19.7" x2="2" y2="26" width="0" layer="19" extent="1-1"/>
+<wire x1="2.5" y1="27.5" x2="17.5" y2="33.5" width="0" layer="19" extent="1-1"/>
+<wire x1="0.5" y1="20.7" x2="2.5" y2="27.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="XOR3" pad="AND"/>
 <contactref element="OR1" pad="A"/>
-<wire x1="14.5" y1="19.7" x2="17" y2="29" width="0" layer="19" extent="1-1"/>
+<wire x1="15.5" y1="20.7" x2="17.5" y2="30.5" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
