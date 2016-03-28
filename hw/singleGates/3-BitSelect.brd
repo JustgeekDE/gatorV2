@@ -564,8 +564,8 @@ design rules under a new name.</description>
 <wire x1="35.1" y1="4" x2="35.4" y2="3.7" width="0.2" layer="1"/>
 <wire x1="35.1" y1="5.1" x2="35.1" y2="10.3" width="0.2" layer="1"/>
 <wire x1="35.4" y1="3.7" x2="36.05" y2="3.7" width="0.2" layer="1"/>
-<wire x1="35.8" y1="0" x2="35.8" y2="2.3" width="0.2" layer="1"/>
-<wire x1="35.8" y1="2.3" x2="36" y2="2.5" width="0.2" layer="1"/>
+<wire x1="36" y1="0" x2="36" y2="2.3" width="0.2" layer="1"/>
+<wire x1="36" y1="2.3" x2="36" y2="2.5" width="0.2" layer="1"/>
 <wire x1="36" y1="2.5" x2="36" y2="3.65" width="0.2" layer="1"/>
 <wire x1="36" y1="3.65" x2="36.05" y2="3.7" width="0.2" layer="1"/>
 <contactref element="Q2" pad="P$2"/>
@@ -585,10 +585,13 @@ design rules under a new name.</description>
 <wire x1="37.85" y1="8.5" x2="37.8" y2="8.5" width="0.2" layer="1"/>
 <wire x1="37.8" y1="8.5" x2="37.8" y2="6.35" width="0.2" layer="1"/>
 <wire x1="37.8" y1="6.35" x2="37.85" y2="6.3" width="0.2" layer="1"/>
-<wire x1="38.2" y1="0" x2="38.9" y2="0.7" width="0.2" layer="1"/>
-<wire x1="38.9" y1="0.7" x2="38.9" y2="5.9" width="0.2" layer="1"/>
+<wire x1="38" y1="0" x2="38" y2="0.1" width="0.2" layer="1"/>
+<wire x1="38.9" y1="1.6" x2="38.9" y2="5.9" width="0.2" layer="1"/>
 <wire x1="38.9" y1="5.9" x2="38.5" y2="6.3" width="0.2" layer="1"/>
 <wire x1="38.5" y1="6.3" x2="37.85" y2="6.3" width="0.2" layer="1"/>
+<wire x1="38" y1="0.1" x2="38" y2="0.2" width="0.2" layer="1"/>
+<wire x1="38" y1="0.2" x2="38.9" y2="1.1" width="0.2" layer="1"/>
+<wire x1="38.9" y1="1.1" x2="38.9" y2="1.6" width="0.2" layer="1"/>
 </signal>
 <signal name="N$27">
 <contactref element="R2" pad="2"/>
@@ -911,8 +914,8 @@ design rules under a new name.</description>
 <wire x1="36.5" y1="5" x2="36.7" y2="4.8" width="0.2" layer="1"/>
 <wire x1="36.7" y1="4.8" x2="37" y2="4.5" width="0.2" layer="1"/>
 <wire x1="37" y1="4.5" x2="37" y2="1.5" width="0.2" layer="1"/>
-<wire x1="36.8" y1="0" x2="36.8" y2="0.3" width="0.2" layer="1"/>
-<wire x1="36.8" y1="0.3" x2="37" y2="0.5" width="0.2" layer="1"/>
+<wire x1="37" y1="0" x2="37" y2="0.3" width="0.2" layer="1"/>
+<wire x1="37" y1="0.3" x2="37" y2="0.5" width="0.2" layer="1"/>
 <wire x1="37" y1="0.5" x2="37" y2="1.5" width="0.2" layer="1"/>
 <contactref element="Q17" pad="P$3"/>
 </signal>
