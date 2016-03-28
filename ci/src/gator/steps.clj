@@ -11,5 +11,5 @@
 (defn with-repo [& steps]
   (git/with-git repo-uri steps))
 
-(defn scoville-unit-tests [args ctx]
-  (shell/bash ctx (:cwd args) "py.test test/unitTests"))
+(defn single-gates-unit-tests [args ctx]
+  (shell/bash ctx (:cwd args) "./runTests.sh unitTestsSimulation"))
