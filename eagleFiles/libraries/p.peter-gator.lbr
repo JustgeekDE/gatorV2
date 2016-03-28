@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -310,8 +310,8 @@
 <wire x1="4" y1="10.5" x2="4.5" y2="10" width="0.127" layer="21"/>
 <wire x1="4.5" y1="10" x2="4.5" y2="9.5" width="0.127" layer="21"/>
 <smd name="AND" x="4" y="13" dx="0.2" dy="0.2" layer="1" rot="R90"/>
-<smd name="V-" x="5" y="13" dx="0.2" dy="0.2" layer="1" rot="R90"/>
-<smd name="V+" x="6" y="13" dx="0.2" dy="0.2" layer="1" rot="R90"/>
+<smd name="_VN" x="5" y="13" dx="0.2" dy="0.2" layer="1" rot="R90"/>
+<smd name="_VP" x="6" y="13" dx="0.2" dy="0.2" layer="1" rot="R90"/>
 <smd name="A" x="5" y="0" dx="0.2" dy="0.2" layer="1" rot="R90"/>
 <smd name="B" x="2" y="0" dx="0.2" dy="0.2" layer="1" rot="R90"/>
 </package>
@@ -1177,8 +1177,8 @@
 <text x="-20.32" y="15.24" size="2.54" layer="94" ratio="12" align="center-left">A</text>
 <text x="-20.32" y="-15.24" size="2.54" layer="94" ratio="12" align="center-left">B</text>
 <text x="27.94" y="0" size="2.54" layer="94" ratio="12" align="center-right">AND</text>
-<pin name="V+" x="-2.54" y="27.94" visible="off" length="short" rot="R270"/>
-<pin name="V-" x="-2.54" y="-27.94" visible="off" length="short" rot="R90"/>
+<pin name="_VP" x="-2.54" y="27.94" visible="off" length="short" rot="R270"/>
+<pin name="_VN" x="-2.54" y="-27.94" visible="off" length="short" rot="R90"/>
 <text x="-2.54" y="22.86" size="2.54" layer="94" ratio="12" align="top-center">V+</text>
 <text x="-2.54" y="-22.86" size="2.54" layer="94" ratio="12" align="bottom-center">V-</text>
 </symbol>
@@ -1474,8 +1474,6 @@
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="AND" pad="AND"/>
 <connect gate="G$1" pin="B" pad="B"/>
-<connect gate="G$1" pin="V+" pad="V+"/>
-<connect gate="G$1" pin="V-" pad="V-"/>
 </connects>
 <technologies>
 <technology name="">
