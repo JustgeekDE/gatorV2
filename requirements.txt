@@ -1,0 +1,2 @@
+pySerial
+-e git://github.com/JustgeekDE/scoville.git#egg=scoville
