@@ -6,6 +6,7 @@ from pkg_resources import resource_string
 
 from scoville.circuit import Circuit
 from scoville.eagleSchematic import EagleSchematic
+from scoville.parts import GenericVoltageSource
 from unitTests import test_AND
 
 
@@ -14,6 +15,7 @@ def getCircuitFunction(schematicFileName):
     schematicSource = resource_string('hw', schematicFileName)
     schematic = EagleSchematic(schematicSource)
     circuit = Circuit(schematic.getSpiceData())
+    circuit.setSignal(GenericVoltageSource('supply', '_VP', '_VN', 5.0))
     return circuit
 
   return getCircuit
