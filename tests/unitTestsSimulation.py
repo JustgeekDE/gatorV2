@@ -10,19 +10,20 @@ from scoville.parts import GenericVoltageSource
 from unitTests import test_AND
 
 
-def getCircuitFunction(schematicFileName):
+def getCircuitFunction(schematicFileName, supplyName):
   def getCircuit(self):
     schematicSource = resource_string('hw', schematicFileName)
     schematic = EagleSchematic(schematicSource)
     circuit = Circuit(schematic.getSpiceData())
-    circuit.setSignal(GenericVoltageSource('supply', '_VP', '_VN', 5.0))
+    circuit.setSignal(GenericVoltageSource(supplyName, '_VP', '_VN', 5.0))
     return circuit
 
   return getCircuit
 
 
 def runTests(schematicFileName, testClass):
-  testClass.getCircuit = getCircuitFunction(schematicFileName)
+  testClass.supplyName = 'supply'
+  testClass.getCircuit = getCircuitFunction(schematicFileName, testClass.supplyName)
   tests = unittest.TestLoader().loadTestsFromTestCase(testClass)
   return unittest.TextTestRunner(verbosity=2).run(tests).wasSuccessful()
 
