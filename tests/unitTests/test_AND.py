@@ -1,15 +1,6 @@
 from unittest import TestCase
+from constants import LOW, HIGH, MAX_LOW, MIN_HIGH, MAX_CURRENT, INPUT_RESISTANCE
 from scoville.signal import GenericSignal, DelayedSignal
-
-INPUT_RESISTANCE = 10
-
-LOW = 0.0
-HIGH = 5.0
-
-MAX_CURRENT = 0.005
-MAX_LOW = 1.5
-MIN_HIGH = 3.5
-
 
 
 class ANDUnitTests(TestCase):
