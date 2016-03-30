@@ -23,7 +23,7 @@ def getCircuitFunction(schematicFileName, supplyName):
 
 def runTests(schematicFileName, testClass):
   testClass.supplyName = 'Vsupply'
-  testClass.getCircuit = getCircuitFunction(schematicFileName, testClass.supplyName)
+  testClass.getCircuit = getCircuitFunction(schematicFileName, 'supply')
   tests = unittest.TestLoader().loadTestsFromTestCase(testClass)
   return unittest.TextTestRunner(verbosity=2).run(tests).wasSuccessful()
 
