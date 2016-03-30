@@ -14,8 +14,11 @@ class TwoInputGateTest(TestCase):
     circuit.inspectCurrent(self.supplyName)
 
     circuit.run()
-    self.assertLess(circuit.getVoltage(outputName), MAX_LOW, "{0} {1} {2} should be at most {3}".format(a,b,outputName,MAX_LOW))
-    self.assertLess(circuit.getMaxCurrent(self.supplyName), MAX_CURRENT, "The gate should use at most {0} ampere".format(MAX_CURRENT))
+    outputVoltage = circuit.getVoltage(outputName)
+    current = circuit.getMaxCurrent(self.supplyName)
+
+    self.assertLess(outputVoltage, MAX_LOW, "{0} {1} {2} should be at most {3} (was {4})".format(a, outputName, b, MAX_LOW, outputVoltage))
+    self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
 
   def assertOutputIsHigh(self, a, b, outputName):
     circuit = self.getCircuit()
@@ -26,8 +29,11 @@ class TwoInputGateTest(TestCase):
     circuit.inspectCurrent(self.supplyName)
 
     circuit.run()
-    self.assertLess(circuit.getVoltage(outputName), MAX_LOW, "{0} {1} {2} should be at least {3}".format(a,b,outputName,MIN_HIGH))
-    self.assertLess(circuit.getMaxCurrent(self.supplyName), MAX_CURRENT, "The gate should use at most {0} ampere".format(MAX_CURRENT))
+    outputVoltage = circuit.getVoltage(outputName)
+    current = circuit.getMaxCurrent(self.supplyName)
+
+    self.assertGreater(outputVoltage, MIN_HIGH, "{0} {1} {2} should be at least {3} (was {4})".format(a, outputName, b, MIN_HIGH, outputVoltage))
+    self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
 
   def assertSwitchingOnIsFast(self, initialState, laterState, maxDelay, outputName):
     circuit = self.getCircuit()
@@ -41,12 +47,16 @@ class TwoInputGateTest(TestCase):
     circuit.setSignal(DelayedSignal("A", endA, delay=changeTime, startValue=startA, resistance=INPUT_RESISTANCE))
     circuit.setSignal(DelayedSignal("B", endB, delay=changeTime, startValue=startB, resistance=INPUT_RESISTANCE))
     circuit.inspectVoltage(outputName)
-    # circuit.inspectCurrent(self.supplyName)
+    circuit.inspectCurrent(self.supplyName)
 
     circuit.run(endTime, 0.001)
-    self.assertLess(circuit.getMaxVoltage(outputName, start=1, end=changeTime), MAX_LOW)
-    self.assertGreater(circuit.getMinVoltage(outputName, start=changeTime + maxDelay, end=endTime), MIN_HIGH)
-    # self.assertLess(circuit.getMaxCurrent(self.supplyName), MAX_CURRENT, "The gate should use at most {0} ampere".format(MAX_CURRENT))
+    current = circuit.getMaxCurrent(self.supplyName)
+    voltageBefore = circuit.getMaxVoltage(outputName, start=1, end=changeTime)
+    voltageAfter = circuit.getMinVoltage(outputName, start=changeTime + maxDelay, end=endTime)
+
+    self.assertLess(voltageBefore, MAX_LOW, "{0} {1} {2} should be at most {3} (was {4})".format(startA, outputName, startB, MAX_LOW, voltageBefore))
+    self.assertGreater(voltageAfter, MIN_HIGH, "{0} {1} {2} should be at least {3} (was {4})".format(endA, outputName, endB, MIN_HIGH, voltageAfter))
+    self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
 
   def assertSwitchingOffIsFast(self, initialState, laterState, maxDelay, outputName):
     circuit = self.getCircuit()
@@ -60,9 +70,13 @@ class TwoInputGateTest(TestCase):
     circuit.setSignal(DelayedSignal("A", endA, delay=changeTime, startValue=startA, resistance=INPUT_RESISTANCE))
     circuit.setSignal(DelayedSignal("B", endB, delay=changeTime, startValue=startB, resistance=INPUT_RESISTANCE))
     circuit.inspectVoltage(outputName)
-    # circuit.inspectCurrent(self.supplyName)
+    circuit.inspectCurrent(self.supplyName)
 
     circuit.run(endTime, 0.001)
-    self.assertGreater(circuit.getMinVoltage(outputName, start=1, end=changeTime), MIN_HIGH)
-    self.assertLess(circuit.getMaxVoltage(outputName, start=changeTime + maxDelay, end=endTime), MAX_LOW)
-    # self.assertLess(circuit.getMaxCurrent(self.supplyName), MAX_CURRENT, "The gate should use at most {0} ampere".format(MAX_CURRENT))
+    current = circuit.getMaxCurrent(self.supplyName)
+    voltageBefore = circuit.getMaxVoltage(outputName, start=1, end=changeTime)
+    voltageAfter = circuit.getMinVoltage(outputName, start=changeTime + maxDelay, end=endTime)
+
+    self.assertGreater(voltageBefore, MIN_HIGH, "{0} {1} {2} should be at least {3} (was {4})".format(startA, outputName, startB, MIN_HIGH, voltageBefore))
+    self.assertLess(voltageAfter, MAX_LOW, "{0} {1} {2} should be at most {3} (was {4})".format(endA, outputName, endB, MAX_LOW, voltageAfter))
+    self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))

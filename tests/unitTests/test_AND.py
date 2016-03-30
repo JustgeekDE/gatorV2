@@ -1,7 +1,5 @@
-from unittest import TestCase
 from constants import LOW, HIGH, MAX_LOW, MIN_HIGH, MAX_CURRENT, INPUT_RESISTANCE
 import twoInputGateTest
-from scoville.signal import GenericSignal, DelayedSignal
 
 
 class ANDUnitTests(twoInputGateTest.TwoInputGateTest):
