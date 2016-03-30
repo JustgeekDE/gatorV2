@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -363,7 +363,6 @@
 <wire x1="30.48" y1="33.02" x2="-30.48" y2="33.02" width="0.4064" layer="97" style="longdash"/>
 <wire x1="-30.48" y1="33.02" x2="-30.48" y2="-33.02" width="0.4064" layer="97" style="longdash"/>
 <wire x1="-30.48" y1="-33.02" x2="30.48" y2="-33.02" width="0.4064" layer="97" style="longdash"/>
-<text x="208.28" y="86.36" size="2.54" layer="97" ratio="12">1-BIT SELECT</text>
 <wire x1="30.48" y1="33.02" x2="30.48" y2="-33.02" width="0.4064" layer="97" style="longdash"/>
 </plain>
 <instances>
@@ -404,7 +403,7 @@
 <busses>
 </busses>
 <nets>
-<net name="V-" class="0">
+<net name="_VN" class="0">
 <segment>
 <pinref part="Q2" gate="G$1" pin="EMITTER"/>
 <wire x1="-22.86" y1="15.24" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
@@ -559,7 +558,7 @@
 <pinref part="Q3" gate="G$1" pin="BASE"/>
 </segment>
 </net>
-<net name="V+" class="0">
+<net name="_VP" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="2"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -404,7 +404,7 @@
 <busses>
 </busses>
 <nets>
-<net name="V-" class="0">
+<net name="_VN" class="0">
 <segment>
 <wire x1="35.56" y1="-2.54" x2="35.56" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="-5.08" x2="40.64" y2="-5.08" width="0.1524" layer="91"/>
@@ -572,7 +572,7 @@
 <pinref part="Q2" gate="G$1" pin="EMITTER"/>
 </segment>
 </net>
-<net name="V+" class="0">
+<net name="_VP" class="0">
 <segment>
 <wire x1="-25.4" y1="22.86" x2="-25.4" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="27.94" x2="-10.16" y2="27.94" width="0.1524" layer="91"/>
