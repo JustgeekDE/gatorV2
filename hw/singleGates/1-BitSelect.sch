@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -123,17 +123,13 @@
 <wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
 <smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
-<text x="0" y="1.6" size="0.8" layer="25" font="vector" ratio="12" rot="SR0" align="center">
-                        &gt;NAME
-                    </text>
-<text x="0" y="0" size="0.8" layer="27" font="vector" ratio="12" rot="SR0" align="center">
-                        &gt;VALUE
-                    </text>
+<text x="0" y="-1" size="0.7" layer="27" font="vector" ratio="10" rot="SR0" align="top-center">&gt;VALUE</text>
 <rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
 <rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
 <wire x1="-0.4" y1="0.73" x2="0.4" y2="0.73" width="0.15" layer="21"/>
 <wire x1="-0.4" y1="-0.73" x2="0.4" y2="-0.73" width="0.15" layer="21"/>
+<text x="0" y="1" size="0.7" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
 </package>
 <package name="R0402">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -584,10 +580,4 @@
 </sheets>
 </schematic>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
