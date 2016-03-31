@@ -74,8 +74,8 @@ class TwoInputGateTest(TestCase):
 
     circuit.run(endTime, 0.001)
     current = circuit.getMaxCurrent(self.supplyName)
-    voltageBefore = circuit.getMaxVoltage(outputName, start=1, end=changeTime)
-    voltageAfter = circuit.getMinVoltage(outputName, start=changeTime + maxDelay, end=endTime)
+    voltageBefore = circuit.getMinVoltage(outputName, start=1, end=changeTime)
+    voltageAfter = circuit.getMaxVoltage(outputName, start=changeTime + maxDelay, end=endTime)
 
     self.assertGreater(voltageBefore, MIN_HIGH, "{0} {1} {2} should be at least {3} (was {4})".format(startA, outputName, startB, MIN_HIGH, voltageBefore))
     self.assertLess(voltageAfter, MAX_LOW, "{0} {1} {2} should be at most {3} (was {4})".format(endA, outputName, endB, MAX_LOW, voltageAfter))
