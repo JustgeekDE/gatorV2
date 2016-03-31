@@ -7,7 +7,7 @@ from pkg_resources import resource_string
 from scoville.circuit import Circuit
 from scoville.eagleSchematic import EagleSchematic
 from scoville.parts import GenericVoltageSource
-from unitTests import test_AND, test_OR, test_NAND
+from unitTests import test_AND, test_OR, test_NAND, test_NOT
 
 
 def getCircuitFunction(schematicFileName, supplyName):
@@ -37,5 +37,7 @@ if __name__ == '__main__':
   success = success and runTests('singleGates/AND.sch', test_AND.ANDUnitTests)
   success = success and runTests('singleGates/OR.sch', test_OR.ORUnitTests)
   success = success and runTests('singleGates/NAND.sch', test_NAND.NANDUnitTests)
+  success = success and runTests('singleGates/NOT-A.sch', test_NOT.NOTUnitTests)
+  success = success and runTests('singleGates/NOT-B.sch', test_NOT.NOTUnitTests)
 
   sys.exit(not success)
