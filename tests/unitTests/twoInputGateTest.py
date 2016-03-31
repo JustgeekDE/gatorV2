@@ -5,8 +5,9 @@ from scoville.signal import GenericSignal, DelayedSignal
 
 class TwoInputGateTest(TestCase):
 
-  def assertOutputIsLow(self, a, b, outputName):
-    circuit = self.getCircuit()
+  def assertOutputIsLow(self, a, b, outputName, circuit = None):
+    if circuit == None:
+      circuit = self.getCircuit()
 
     circuit.setSignal(GenericSignal("A", a))
     circuit.setSignal(GenericSignal("B", b))
@@ -20,8 +21,11 @@ class TwoInputGateTest(TestCase):
     self.assertLess(outputVoltage, MAX_LOW, "{0} {1} {2} should be at most {3} (was {4})".format(a, outputName, b, MAX_LOW, outputVoltage))
     self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
 
-  def assertOutputIsHigh(self, a, b, outputName):
-    circuit = self.getCircuit()
+    return circuit
+
+  def assertOutputIsHigh(self, a, b, outputName, circuit = None):
+    if circuit == None:
+      circuit = self.getCircuit()
 
     circuit.setSignal(GenericSignal("A", a))
     circuit.setSignal(GenericSignal("B", b))
@@ -35,8 +39,11 @@ class TwoInputGateTest(TestCase):
     self.assertGreater(outputVoltage, MIN_HIGH, "{0} {1} {2} should be at least {3} (was {4})".format(a, outputName, b, MIN_HIGH, outputVoltage))
     self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
 
-  def assertSwitchingOnIsFast(self, initialState, laterState, maxDelay, outputName):
-    circuit = self.getCircuit()
+    return circuit
+
+  def assertSwitchingOnIsFast(self, initialState, laterState, maxDelay, outputName, circuit = None):
+    if circuit == None:
+      circuit = self.getCircuit()
 
     changeTime = 10
     endTime = 20
@@ -58,8 +65,11 @@ class TwoInputGateTest(TestCase):
     self.assertGreater(voltageAfter, MIN_HIGH, "{0} {1} {2} should be at least {3} (was {4})".format(endA, outputName, endB, MIN_HIGH, voltageAfter))
     self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
 
-  def assertSwitchingOffIsFast(self, initialState, laterState, maxDelay, outputName):
-    circuit = self.getCircuit()
+    return circuit
+
+  def assertSwitchingOffIsFast(self, initialState, laterState, maxDelay, outputName, circuit = None):
+    if circuit == None:
+      circuit = self.getCircuit()
 
     changeTime = 10
     endTime = 20
@@ -80,3 +90,5 @@ class TwoInputGateTest(TestCase):
     self.assertGreater(voltageBefore, MIN_HIGH, "{0} {1} {2} should be at least {3} (was {4})".format(startA, outputName, startB, MIN_HIGH, voltageBefore))
     self.assertLess(voltageAfter, MAX_LOW, "{0} {1} {2} should be at most {3} (was {4})".format(endA, outputName, endB, MAX_LOW, voltageAfter))
     self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
+
+    return circuit
