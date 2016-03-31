@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -347,8 +347,8 @@
 <part name="R5" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R7" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R8" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
-<part name="R3" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
-<part name="R6" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R3" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="1k"/>
+<part name="R6" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="1k"/>
 <part name="R9" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="1k"/>
 <part name="Q1" library="p.peter-gator" deviceset="TRANSISTOR-NPN-GENERIC" device="-SOT23-BEC" technology="DEFAULT" value="BC817"/>
 <part name="Q2" library="p.peter-gator" deviceset="TRANSISTOR-NPN-GENERIC" device="-SOT23-BEC" technology="DEFAULT" value="BC817"/>

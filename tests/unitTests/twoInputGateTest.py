@@ -46,7 +46,7 @@ class TwoInputGateTest(TestCase):
       circuit = self.getCircuit()
 
     changeTime = 10
-    endTime = 20
+    endTime = changeTime + (2*maxDelay)
 
     (startA,startB) = initialState
     (endA,endB) = laterState

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -380,11 +380,11 @@ design rules under a new name.</description>
 <attribute name="SV_SPICE_ORDER" value="1;2" x="6" y="2.8" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SV_SPICE_PREFIX" value="R" x="6" y="2.8" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R3" library="p.peter-gator" package="R0603" value="10k" x="8.4" y="2.8" smashed="yes" rot="R90">
+<element name="R3" library="p.peter-gator" package="R0603" value="1k" x="8.4" y="2.8" smashed="yes" rot="R90">
 <attribute name="SV_SPICE_ORDER" value="1;2" x="8.4" y="2.8" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SV_SPICE_PREFIX" value="R" x="8.4" y="2.8" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R6" library="p.peter-gator" package="R0603" value="10k" x="2" y="9.7" smashed="yes" rot="R180">
+<element name="R6" library="p.peter-gator" package="R0603" value="1k" x="2" y="9.7" smashed="yes" rot="R180">
 <attribute name="SV_SPICE_ORDER" value="1;2" x="2" y="9.7" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SV_SPICE_PREFIX" value="R" x="2" y="9.7" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
