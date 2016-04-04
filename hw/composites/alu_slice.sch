@@ -389,11 +389,11 @@
 <wire x1="2.75" y1="2.75" x2="4.5" y2="2.75" width="0.127" layer="21"/>
 <wire x1="4.5" y1="2.75" x2="5.25" y2="2" width="0.127" layer="21"/>
 <wire x1="5.25" y1="2" x2="5.5" y2="2" width="0.127" layer="21"/>
-<smd name="V+" x="1" y="12.5" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VP" x="1" y="12.5" dx="0.2" dy="0.2" layer="1"/>
 <wire x1="1" y1="10.27" x2="1" y2="12.19" width="0.127" layer="21"/>
 <smd name="NOR" x="5.3" y="12.5" dx="0.2" dy="0.2" layer="1"/>
 <smd name="XOR" x="10.5" y="12.5" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V-" x="13.3" y="12.5" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VN" x="13.3" y="12.5" dx="0.2" dy="0.2" layer="1"/>
 <wire x1="10.5" y1="11" x2="10.5" y2="12.2" width="0.127" layer="21"/>
 <wire x1="13.3" y1="12.2" x2="13.3" y2="11.6" width="0.127" layer="21"/>
 <wire x1="13.3" y1="11.6" x2="13.5" y2="11.4" width="0.127" layer="21"/>
@@ -453,8 +453,8 @@
 <wire x1="0.6" y1="3.1" x2="1" y2="3.1" width="0.2" layer="51"/>
 <smd name="A" x="2" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="NOT" x="1" y="8.5" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V-" x="2" y="8.5" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V+" x="3" y="8.5" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VN" x="2" y="8.5" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VP" x="3" y="8.5" dx="0.2" dy="0.2" layer="1"/>
 <wire x1="1" y1="7" x2="1" y2="8" width="0.2" layer="51"/>
 </package>
 <package name="OR">
@@ -557,8 +557,8 @@
 <smd name="A" x="3" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="B" x="6" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="OR" x="4" y="12.5" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V-" x="5" y="12.5" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V+" x="6" y="12.5" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VN" x="5" y="12.5" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VP" x="6" y="12.5" dx="0.2" dy="0.2" layer="1"/>
 </package>
 <package name="SELECTOR-8_BIT-NOMUX">
 <wire x1="0" y1="-0.01" x2="39.5" y2="-0.01" width="0.1" layer="41"/>
@@ -687,9 +687,9 @@
 <smd name="I7" x="29.8" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="S8" x="32" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="I8" x="34.2" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V-" x="36" y="0" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VN" x="36" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="OUT" x="37" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V+" x="38" y="0" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VP" x="38" y="0" dx="0.2" dy="0.2" layer="1"/>
 </package>
 <package name="SELECTOR-2-LANE-NOMUX">
 <wire x1="0" y1="-0.01" x2="12" y2="-0.01" width="0.1" layer="41"/>
@@ -739,9 +739,9 @@
 <smd name="SEL" x="2" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="B" x="1.5" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="A" x="1" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V+" x="11" y="0" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VP" x="11" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="OUT" x="10" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V-" x="9" y="0" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VN" x="9" y="0" dx="0.2" dy="0.2" layer="1"/>
 </package>
 <package name="NAND">
 <wire x1="0" y1="0" x2="7" y2="0" width="0.1" layer="41"/>
@@ -808,9 +808,9 @@
 <wire x1="3.75" y1="7" x2="4" y2="7.25" width="0.127" layer="21"/>
 <smd name="A" x="3" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="B" x="6" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V+" x="4" y="8.5" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VP" x="4" y="8.5" dx="0.2" dy="0.2" layer="1"/>
 <smd name="NAND" x="5" y="8.5" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V-" x="6" y="8.5" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VN" x="6" y="8.5" dx="0.2" dy="0.2" layer="1"/>
 <wire x1="4" y1="7.3" x2="4" y2="8.2" width="0.127" layer="21"/>
 <wire x1="5" y1="7" x2="5" y2="8.2" width="0.127" layer="21"/>
 <wire x1="6" y1="7" x2="6" y2="8.2" width="0.127" layer="21"/>
@@ -851,8 +851,8 @@
 <wire x1="5" y1="4" x2="5.5" y2="3.5" width="0.2" layer="51"/>
 <wire x1="5.5" y1="3.5" x2="5.5" y2="2" width="0.2" layer="51"/>
 <smd name="A" x="1.5" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V-" x="3.5" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="V+" x="4.5" y="0" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VN" x="3.5" y="0" dx="0.2" dy="0.2" layer="1"/>
+<smd name="_VP" x="4.5" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="NOT" x="5.5" y="0" dx="0.2" dy="0.2" layer="1"/>
 </package>
 </packages>
@@ -883,8 +883,8 @@
 <text x="40.64" y="-24.892" size="2.54" layer="94" ratio="12" align="bottom-right">AND</text>
 <text x="40.64" y="0.508" size="2.54" layer="94" ratio="12" align="bottom-right">XOR</text>
 <text x="40.64" y="25.908" size="2.54" layer="94" ratio="12" align="bottom-right">NOR</text>
-<pin name="V+" x="-10.16" y="30.48" visible="off" length="short" rot="R270"/>
-<pin name="V-" x="-10.16" y="-30.48" visible="off" length="short" rot="R90"/>
+<pin name="_VP" x="-10.16" y="30.48" visible="off" length="short" rot="R270"/>
+<pin name="_VN" x="-10.16" y="-30.48" visible="off" length="short" rot="R90"/>
 <text x="-10.16" y="27.178" size="2.54" layer="94" ratio="12" align="top-center">V+</text>
 <text x="-10.16" y="-27.178" size="2.54" layer="94" ratio="12" align="bottom-center">V-</text>
 </symbol>
@@ -897,8 +897,8 @@
 <wire x1="12.7" y1="0" x2="-5.08" y2="-7.62" width="0.4064" layer="94"/>
 <text x="2.54" y="4.826" size="1.778" layer="95">&gt;NAME</text>
 <wire x1="-7.62" y1="0" x2="-5.08" y2="0" width="0.4064" layer="94"/>
-<pin name="V+" x="-2.54" y="12.7" visible="off" length="short" rot="R270"/>
-<pin name="V-" x="-2.54" y="-12.7" visible="off" length="short" rot="R90"/>
+<pin name="_VP" x="-2.54" y="12.7" visible="off" length="short" rot="R270"/>
+<pin name="_VN" x="-2.54" y="-12.7" visible="off" length="short" rot="R90"/>
 <text x="2.54" y="0" size="3.81" layer="94" ratio="12" align="center">NOT</text>
 <circle x="13.97" y="0" radius="1.27" width="0.508" layer="94"/>
 <wire x1="17.78" y1="0" x2="15.24" y2="0" width="0.508" layer="94"/>
@@ -919,8 +919,8 @@
 <wire x1="-25.4" y1="12.7" x2="-17.272" y2="12.7" width="0.254" layer="94"/>
 <wire x1="-25.4" y1="-12.7" x2="-17.272" y2="-12.7" width="0.254" layer="94"/>
 <wire x1="15.24" y1="0" x2="17.78" y2="0" width="0.254" layer="94"/>
-<pin name="V+" x="-12.7" y="27.94" visible="pad" length="middle" rot="R270"/>
-<pin name="V-" x="-12.7" y="-27.94" visible="off" length="middle" rot="R90"/>
+<pin name="_VP" x="-12.7" y="27.94" visible="pad" length="middle" rot="R270"/>
+<pin name="_VN" x="-12.7" y="-27.94" visible="off" length="middle" rot="R90"/>
 </symbol>
 <symbol name="SELECTOR-8_BIT-NOMUX">
 <pin name="S1" x="-22.86" y="78.74" visible="off" length="short" swaplevel="1"/>
@@ -1045,8 +1045,8 @@
 <wire x1="10.16" y1="68.58" x2="10.16" y2="-73.66" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-73.66" x2="20.32" y2="-73.66" width="0.254" layer="94"/>
 <pin name="OUT" x="22.86" y="-73.66" visible="off" length="short" rot="R180"/>
-<pin name="V+" x="0" y="96.52" visible="off" length="short" rot="R270"/>
-<pin name="V-" x="0" y="-93.98" visible="off" length="short" rot="R90"/>
+<pin name="_VP" x="0" y="96.52" visible="off" length="short" rot="R270"/>
+<pin name="_VN" x="0" y="-93.98" visible="off" length="short" rot="R90"/>
 </symbol>
 <symbol name="SELECTOR-2_LANES-MUXED">
 <pin name="A" x="-33.02" y="27.94" visible="off" length="short" swaplevel="1"/>
@@ -1073,8 +1073,8 @@
 <circle x="-12.7" y="10.16" radius="1.27" width="0" layer="94"/>
 <circle x="-12.7" y="-5.08" radius="1.27" width="0" layer="94"/>
 <circle x="7.62" y="2.54" radius="1.27" width="0" layer="94"/>
-<pin name="V+" x="-5.08" y="38.1" visible="off" length="short" rot="R270"/>
-<pin name="V-" x="-5.08" y="-30.48" visible="off" length="short" rot="R90"/>
+<pin name="_VP" x="-5.08" y="38.1" visible="off" length="short" rot="R270"/>
+<pin name="_VN" x="-5.08" y="-30.48" visible="off" length="short" rot="R90"/>
 </symbol>
 <symbol name="NAND">
 <pin name="A" x="-15.24" y="10.16" visible="off" length="short" swaplevel="1"/>
@@ -1088,8 +1088,8 @@
 <wire x1="-5.08" y1="-15.24" x2="10.16" y2="0" width="0.254" layer="94" curve="90"/>
 <text x="-10.16" y="10.16" size="1.778" layer="95">&gt;NAME</text>
 <circle x="11.43" y="0" radius="1.27" width="0.254" layer="94"/>
-<pin name="V+" x="-7.62" y="17.78" visible="off" length="short" rot="R270"/>
-<pin name="V-" x="-7.62" y="-17.78" visible="off" length="short" rot="R90"/>
+<pin name="_VP" x="-7.62" y="17.78" visible="off" length="short" rot="R270"/>
+<pin name="_VN" x="-7.62" y="-17.78" visible="off" length="short" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1104,9 +1104,9 @@
 <connect gate="G$1" pin="AND" pad="AND"/>
 <connect gate="G$1" pin="B" pad="B"/>
 <connect gate="G$1" pin="NOR" pad="NOR"/>
-<connect gate="G$1" pin="V+" pad="V+"/>
-<connect gate="G$1" pin="V-" pad="V-"/>
 <connect gate="G$1" pin="XOR" pad="XOR"/>
+<connect gate="G$1" pin="_VN" pad="_VN"/>
+<connect gate="G$1" pin="_VP" pad="_VP"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1123,8 +1123,8 @@
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="NOT" pad="NOT"/>
-<connect gate="G$1" pin="V+" pad="V+"/>
-<connect gate="G$1" pin="V-" pad="V-"/>
+<connect gate="G$1" pin="_VN" pad="_VN"/>
+<connect gate="G$1" pin="_VP" pad="_VP"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1134,8 +1134,8 @@
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="NOT" pad="NOT"/>
-<connect gate="G$1" pin="V+" pad="V+"/>
-<connect gate="G$1" pin="V-" pad="V-"/>
+<connect gate="G$1" pin="_VN" pad="_VN"/>
+<connect gate="G$1" pin="_VP" pad="_VP"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1153,8 +1153,8 @@
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="B" pad="B"/>
 <connect gate="G$1" pin="OR" pad="OR"/>
-<connect gate="G$1" pin="V+" pad="V+"/>
-<connect gate="G$1" pin="V-" pad="V-"/>
+<connect gate="G$1" pin="_VN" pad="_VN"/>
+<connect gate="G$1" pin="_VP" pad="_VP"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1186,8 +1186,8 @@
 <connect gate="G$1" pin="S6" pad="S6"/>
 <connect gate="G$1" pin="S7" pad="S7"/>
 <connect gate="G$1" pin="S8" pad="S8"/>
-<connect gate="G$1" pin="V+" pad="V+"/>
-<connect gate="G$1" pin="V-" pad="V-"/>
+<connect gate="G$1" pin="_VN" pad="_VN"/>
+<connect gate="G$1" pin="_VP" pad="_VP"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1206,8 +1206,8 @@
 <connect gate="G$1" pin="B" pad="B"/>
 <connect gate="G$1" pin="OUT" pad="OUT"/>
 <connect gate="G$1" pin="SEL" pad="SEL"/>
-<connect gate="G$1" pin="V+" pad="V+"/>
-<connect gate="G$1" pin="V-" pad="V-"/>
+<connect gate="G$1" pin="_VN" pad="_VN"/>
+<connect gate="G$1" pin="_VP" pad="_VP"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1225,8 +1225,8 @@
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="B" pad="B"/>
 <connect gate="G$1" pin="NAND" pad="NAND"/>
-<connect gate="G$1" pin="V+" pad="V+"/>
-<connect gate="G$1" pin="V-" pad="V-"/>
+<connect gate="G$1" pin="_VN" pad="_VN"/>
+<connect gate="G$1" pin="_VP" pad="_VP"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1798,61 +1798,61 @@ calculated offsite</text>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="XOR1" gate="G$1" pin="V+"/>
+<pinref part="XOR1" gate="G$1" pin="_VP"/>
 <pinref part="P+15" gate="1" pin="+5V"/>
 <wire x1="-12.7" y1="243.84" x2="-12.7" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="XOR2" gate="G$1" pin="V+"/>
+<pinref part="XOR2" gate="G$1" pin="_VP"/>
 <pinref part="P+16" gate="1" pin="+5V"/>
 <wire x1="81.28" y1="261.62" x2="81.28" y2="259.08" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="NOT1" gate="G$1" pin="V+"/>
+<pinref part="NOT1" gate="G$1" pin="_VP"/>
 <pinref part="P+17" gate="1" pin="+5V"/>
 <wire x1="157.48" y1="198.12" x2="157.48" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="XOR3" gate="G$1" pin="V+"/>
+<pinref part="XOR3" gate="G$1" pin="_VP"/>
 <pinref part="P+18" gate="1" pin="+5V"/>
 <wire x1="187.96" y1="276.86" x2="187.96" y2="279.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OR1" gate="G$1" pin="V+"/>
+<pinref part="OR1" gate="G$1" pin="_VP"/>
 <pinref part="P+19" gate="1" pin="+5V"/>
 <wire x1="259.08" y1="238.76" x2="259.08" y2="236.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OR3" gate="G$1" pin="V+"/>
+<pinref part="OR3" gate="G$1" pin="_VP"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
 </segment>
 <segment>
-<pinref part="SEL2" gate="G$1" pin="V+"/>
+<pinref part="SEL2" gate="G$1" pin="_VP"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="66.04" y1="147.32" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SEL1" gate="G$1" pin="V+"/>
+<pinref part="SEL1" gate="G$1" pin="_VP"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
 <wire x1="-17.78" y1="78.74" x2="-17.78" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SEL3" gate="G$1" pin="V+"/>
+<pinref part="SEL3" gate="G$1" pin="_VP"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
 <wire x1="144.78" y1="147.32" x2="144.78" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="NOT2" gate="G$1" pin="V+"/>
+<pinref part="NOT2" gate="G$1" pin="_VP"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
 <wire x1="25.4" y1="-53.34" x2="25.4" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="NAND1" gate="G$1" pin="V+"/>
+<pinref part="NAND1" gate="G$1" pin="_VP"/>
 <pinref part="P+6" gate="1" pin="+5V"/>
 <wire x1="58.42" y1="-58.42" x2="58.42" y2="-55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="XOR4" gate="G$1" pin="V+"/>
+<pinref part="XOR4" gate="G$1" pin="_VP"/>
 <pinref part="P+7" gate="1" pin="+5V"/>
 <wire x1="129.54" y1="-12.7" x2="129.54" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
@@ -1865,61 +1865,61 @@ calculated offsite</text>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="XOR1" gate="G$1" pin="V-"/>
+<pinref part="XOR1" gate="G$1" pin="_VN"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="-12.7" y1="177.8" x2="-12.7" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="XOR2" gate="G$1" pin="V-"/>
+<pinref part="XOR2" gate="G$1" pin="_VN"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 <wire x1="81.28" y1="195.58" x2="81.28" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="NOT1" gate="G$1" pin="V-"/>
+<pinref part="NOT1" gate="G$1" pin="_VN"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 <wire x1="157.48" y1="167.64" x2="157.48" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="XOR3" gate="G$1" pin="V-"/>
+<pinref part="XOR3" gate="G$1" pin="_VN"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="187.96" y1="213.36" x2="187.96" y2="215.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OR1" gate="G$1" pin="V-"/>
+<pinref part="OR1" gate="G$1" pin="_VN"/>
 <pinref part="GND19" gate="1" pin="GND"/>
 <wire x1="259.08" y1="177.8" x2="259.08" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OR3" gate="G$1" pin="V-"/>
+<pinref part="OR3" gate="G$1" pin="_VN"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="SEL1" gate="G$1" pin="V-"/>
+<pinref part="SEL1" gate="G$1" pin="_VN"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="-17.78" y1="5.08" x2="-17.78" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SEL2" gate="G$1" pin="V-"/>
+<pinref part="SEL2" gate="G$1" pin="_VN"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="66.04" y1="-48.26" x2="66.04" y2="-45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SEL3" gate="G$1" pin="V-"/>
+<pinref part="SEL3" gate="G$1" pin="_VN"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="144.78" y1="73.66" x2="144.78" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="NOT2" gate="G$1" pin="V-"/>
+<pinref part="NOT2" gate="G$1" pin="_VN"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="25.4" y1="-78.74" x2="25.4" y2="-81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="NAND1" gate="G$1" pin="V-"/>
+<pinref part="NAND1" gate="G$1" pin="_VN"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="58.42" y1="-93.98" x2="58.42" y2="-96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="XOR4" gate="G$1" pin="V-"/>
+<pinref part="XOR4" gate="G$1" pin="_VN"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="129.54" y1="-73.66" x2="129.54" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
