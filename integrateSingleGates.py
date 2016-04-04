@@ -48,5 +48,5 @@ if __name__ == '__main__':
     schematic.replace(deviceSet, replacementSchematic)
     board.replaceByPackage(packageName, replacementBoard)
 
-  saveResult(schematic, "build/result.sch")
-  saveResult(board, "build/result.brd")
+  saveResult(schematic, "build/alu_slice.sch")
+  saveResult(board, "build/alu_slice.brd")

@@ -1,5 +1,6 @@
-from constants import LOW, HIGH
 import twoInputGateTest
+from constants import LOW, HIGH
+
 
 class XORUnitTests(twoInputGateTest.TwoInputGateTest):
 

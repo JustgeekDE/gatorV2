@@ -1,6 +1,8 @@
 from unittest import TestCase
-from constants import LOW, HIGH, MAX_LOW, MIN_HIGH, MAX_CURRENT, INPUT_RESISTANCE
+
 from scoville.signal import GenericSignal, DelayedSignal
+
+from constants import LOW, HIGH, MAX_LOW, MIN_HIGH, MAX_CURRENT, INPUT_RESISTANCE
 
 
 class NOTUnitTests(TestCase):
@@ -66,7 +68,7 @@ class NOTUnitTests(TestCase):
 
     circuit.run(endTime, 0.001)
     current = circuit.getMaxCurrent(self.supplyName)
-    voltageBefore = circuit.getMaxVoltage("NOT", start=1, end=changeTime)
+    voltageBefore = circuit.getMinVoltage("NOT", start=1, end=changeTime)
     voltageAfter = circuit.getMaxVoltage("NOT", start=changeTime + maxDelay, end=endTime)
 
     self.assertGreater(voltageBefore, MIN_HIGH, "NOT {0} should be at least {1} (was {2})".format(HIGH, MAX_LOW, voltageBefore))

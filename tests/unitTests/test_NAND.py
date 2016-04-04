@@ -1,5 +1,6 @@
-from constants import LOW, HIGH, MAX_LOW, MIN_HIGH, MAX_CURRENT, INPUT_RESISTANCE
 import twoInputGateTest
+from constants import LOW, HIGH
+
 
 class NANDUnitTests(twoInputGateTest.TwoInputGateTest):
 
