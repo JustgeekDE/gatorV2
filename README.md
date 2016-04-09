@@ -1,5 +1,6 @@
 # Gator
-Gator started as a small project to built a set of multipurpose, breadboard friendly TTL gates. It has since morphed into the endeavour to create a complete CPU built out of only discrete NPN transistors, resistors and capacitors.
+Gator started as a small project to built a set of multipurpose, breadboard friendly TTL gates. It has since morphed into the endeavour to create a complete CPU built out of only discrete NPN transistors, resistors and capacitors.  
+It also serves as a test bed for a few techniques to improve the hardware development process.
 
 ![A 1-Bit full adder](http://www.justgeek.de/wp-content/uploads/2014/07/IMG_0173.jpg)
 (Above is a 1-bit full adder)
