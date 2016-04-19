@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.02" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.02" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -15,9 +15,9 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
@@ -33,9 +33,9 @@
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -120,10 +120,6 @@
 <library name="p.peter-gator">
 <packages>
 <package name="XOR">
-<wire x1="0" y1="0" x2="14" y2="0" width="0.1" layer="41"/>
-<wire x1="14" y1="0" x2="14" y2="12.5" width="0.1" layer="41"/>
-<wire x1="14" y1="12.5" x2="0" y2="12.5" width="0.1" layer="41"/>
-<wire x1="0" y1="12.5" x2="0" y2="0" width="0.1" layer="41"/>
 <wire x1="0" y1="0" x2="14" y2="0" width="0.1" layer="51"/>
 <wire x1="14" y1="0" x2="14" y2="12.5" width="0.1" layer="51"/>
 <wire x1="14" y1="12.5" x2="0" y2="12.5" width="0.1" layer="51"/>
@@ -360,12 +356,39 @@
 <smd name="A" x="12.5" y="0" dx="0.2" dy="0.2" layer="1"/>
 <wire x1="12.5" y1="0.35" x2="12.5" y2="0.55" width="0.127" layer="21"/>
 <wire x1="12.5" y1="0.55" x2="12.45" y2="0.5" width="0.127" layer="21"/>
+<polygon width="0.2" layer="41">
+<vertex x="0" y="12.5"/>
+<vertex x="0" y="0"/>
+<vertex x="0.2" y="0"/>
+<vertex x="0.2" y="0.3"/>
+<vertex x="0.8" y="0.3"/>
+<vertex x="0.8" y="0"/>
+<vertex x="12.2" y="0"/>
+<vertex x="12.2" y="0.3"/>
+<vertex x="12.8" y="0.3"/>
+<vertex x="12.8" y="0"/>
+<vertex x="14" y="0"/>
+<vertex x="14" y="12.5"/>
+<vertex x="13.6" y="12.5"/>
+<vertex x="13.6" y="12.2"/>
+<vertex x="13" y="12.2"/>
+<vertex x="13" y="12.5"/>
+<vertex x="12.9" y="12.5"/>
+<vertex x="10.8" y="12.5"/>
+<vertex x="10.8" y="12.2"/>
+<vertex x="10.2" y="12.2"/>
+<vertex x="10.2" y="12.5"/>
+<vertex x="5.6" y="12.5"/>
+<vertex x="5.6" y="12.2"/>
+<vertex x="5" y="12.2"/>
+<vertex x="5" y="12.5"/>
+<vertex x="1.3" y="12.5"/>
+<vertex x="1.3" y="12.2"/>
+<vertex x="0.2" y="12.2"/>
+<vertex x="0.2" y="12.5"/>
+</polygon>
 </package>
 <package name="NOT-VERTICAL">
-<wire x1="0" y1="0" x2="4" y2="0" width="0.1" layer="41"/>
-<wire x1="4" y1="0" x2="4" y2="8.5" width="0.1" layer="41"/>
-<wire x1="4" y1="8.5" x2="0" y2="8.5" width="0.1" layer="41"/>
-<wire x1="0" y1="8.5" x2="0" y2="0" width="0.1" layer="41"/>
 <wire x1="0" y1="0" x2="2" y2="0" width="0.1" layer="51"/>
 <wire x1="2" y1="0" x2="4" y2="0" width="0.1" layer="51"/>
 <wire x1="4" y1="0" x2="4" y2="8.5" width="0.1" layer="51"/>
@@ -410,12 +433,30 @@
 <smd name="_VN" x="2" y="8.5" dx="0.2" dy="0.2" layer="1"/>
 <smd name="_VP" x="3" y="8.5" dx="0.2" dy="0.2" layer="1"/>
 <wire x1="1" y1="7" x2="1" y2="8" width="0.2" layer="51"/>
+<polygon width="0.2" layer="41">
+<vertex x="0.7" y="8.5"/>
+<vertex x="0" y="8.5"/>
+<vertex x="0" y="0"/>
+<vertex x="1.7" y="0"/>
+<vertex x="1.7" y="0.3"/>
+<vertex x="2.3" y="0.3"/>
+<vertex x="2.3" y="0"/>
+<vertex x="4" y="0"/>
+<vertex x="4" y="8.5"/>
+<vertex x="3.3" y="8.5"/>
+<vertex x="3.3" y="8.2"/>
+<vertex x="2.7" y="8.2"/>
+<vertex x="2.7" y="8.5"/>
+<vertex x="2.3" y="8.5"/>
+<vertex x="2.3" y="8.2"/>
+<vertex x="1.7" y="8.2"/>
+<vertex x="1.7" y="8.5"/>
+<vertex x="1.3" y="8.5"/>
+<vertex x="1.3" y="8.2"/>
+<vertex x="0.7" y="8.2"/>
+</polygon>
 </package>
 <package name="OR">
-<wire x1="0" y1="0" x2="7" y2="0" width="0.1" layer="41"/>
-<wire x1="7" y1="0" x2="7" y2="12.5" width="0.1" layer="41"/>
-<wire x1="7" y1="12.5" x2="0" y2="12.5" width="0.1" layer="41"/>
-<wire x1="0" y1="12.5" x2="0" y2="0" width="0.1" layer="41"/>
 <wire x1="0" y1="0" x2="7" y2="0" width="0.1" layer="51"/>
 <wire x1="7" y1="0" x2="7" y2="12.5" width="0.1" layer="51"/>
 <wire x1="7" y1="12.5" x2="0" y2="12.5" width="0.1" layer="51"/>
@@ -513,12 +554,34 @@
 <smd name="OR" x="4" y="12.5" dx="0.2" dy="0.2" layer="1"/>
 <smd name="_VN" x="5" y="12.5" dx="0.2" dy="0.2" layer="1"/>
 <smd name="_VP" x="6" y="12.5" dx="0.2" dy="0.2" layer="1"/>
+<polygon width="0.2" layer="41">
+<vertex x="3.7" y="12.5"/>
+<vertex x="0" y="12.5"/>
+<vertex x="0" y="0"/>
+<vertex x="2.7" y="0"/>
+<vertex x="2.7" y="0.3"/>
+<vertex x="3.3" y="0.3"/>
+<vertex x="3.3" y="0"/>
+<vertex x="5.7" y="0"/>
+<vertex x="5.7" y="0.3"/>
+<vertex x="6.3" y="0.3"/>
+<vertex x="6.3" y="0"/>
+<vertex x="7" y="0"/>
+<vertex x="7" y="12.5"/>
+<vertex x="6.3" y="12.5"/>
+<vertex x="6.3" y="12.2"/>
+<vertex x="5.7" y="12.2"/>
+<vertex x="5.7" y="12.5"/>
+<vertex x="5.3" y="12.5"/>
+<vertex x="5.3" y="12.2"/>
+<vertex x="4.7" y="12.2"/>
+<vertex x="4.7" y="12.5"/>
+<vertex x="4.3" y="12.5"/>
+<vertex x="4.3" y="12.2"/>
+<vertex x="3.7" y="12.2"/>
+</polygon>
 </package>
 <package name="SELECTOR-8_BIT-NOMUX">
-<wire x1="0" y1="-0.01" x2="39.5" y2="-0.01" width="0.1" layer="41"/>
-<wire x1="39.5" y1="-0.01" x2="39.5" y2="12.49" width="0.1" layer="41"/>
-<wire x1="39.5" y1="12.49" x2="0" y2="12.49" width="0.1" layer="41"/>
-<wire x1="0" y1="12.49" x2="0" y2="-0.01" width="0.1" layer="41"/>
 <wire x1="0" y1="-0.01" x2="39.5" y2="-0.01" width="0.1" layer="51"/>
 <wire x1="39.5" y1="-0.01" x2="39.5" y2="12.49" width="0.1" layer="51"/>
 <wire x1="39.5" y1="12.49" x2="0" y2="12.49" width="0.1" layer="51"/>
@@ -644,12 +707,90 @@
 <smd name="_VN" x="36" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="OUT" x="37" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="_VP" x="38" y="0" dx="0.2" dy="0.2" layer="1"/>
+<polygon width="0.2" layer="41">
+<vertex x="39.5" y="12.5"/>
+<vertex x="0" y="12.5"/>
+<vertex x="0" y="0"/>
+<vertex x="0.9" y="0"/>
+<vertex x="0.9" y="0.3"/>
+<vertex x="1.5" y="0.3"/>
+<vertex x="1.5" y="0"/>
+<vertex x="3.1" y="0"/>
+<vertex x="3.1" y="0.3"/>
+<vertex x="3.7" y="0.3"/>
+<vertex x="3.7" y="0"/>
+<vertex x="5.3" y="0"/>
+<vertex x="5.3" y="0.3"/>
+<vertex x="5.9" y="0.3"/>
+<vertex x="5.9" y="0"/>
+<vertex x="7.5" y="0"/>
+<vertex x="7.5" y="0.3"/>
+<vertex x="8.1" y="0.3"/>
+<vertex x="8.1" y="0"/>
+<vertex x="9.7" y="0"/>
+<vertex x="9.7" y="0.3"/>
+<vertex x="10.3" y="0.3"/>
+<vertex x="10.3" y="0"/>
+<vertex x="11.9" y="0"/>
+<vertex x="11.9" y="0.3"/>
+<vertex x="12.5" y="0.3"/>
+<vertex x="12.5" y="0"/>
+<vertex x="14.1" y="0"/>
+<vertex x="14.1" y="0.3"/>
+<vertex x="14.7" y="0.3"/>
+<vertex x="14.7" y="0"/>
+<vertex x="16.3" y="0"/>
+<vertex x="16.3" y="0.3"/>
+<vertex x="16.9" y="0.3"/>
+<vertex x="16.9" y="0"/>
+<vertex x="18.5" y="0"/>
+<vertex x="18.5" y="0.3"/>
+<vertex x="19.1" y="0.3"/>
+<vertex x="19.1" y="0"/>
+<vertex x="20.7" y="0"/>
+<vertex x="20.7" y="0.3"/>
+<vertex x="21.3" y="0.3"/>
+<vertex x="21.3" y="0"/>
+<vertex x="22.9" y="0"/>
+<vertex x="22.9" y="0.3"/>
+<vertex x="23.5" y="0.3"/>
+<vertex x="23.5" y="0"/>
+<vertex x="25.1" y="0"/>
+<vertex x="25.1" y="0.3"/>
+<vertex x="25.7" y="0.3"/>
+<vertex x="25.7" y="0"/>
+<vertex x="27.3" y="0"/>
+<vertex x="27.3" y="0.3"/>
+<vertex x="27.9" y="0.3"/>
+<vertex x="27.9" y="0"/>
+<vertex x="29.5" y="0"/>
+<vertex x="29.5" y="0.3"/>
+<vertex x="30.1" y="0.3"/>
+<vertex x="30.1" y="0"/>
+<vertex x="31.7" y="0"/>
+<vertex x="31.7" y="0.3"/>
+<vertex x="32.3" y="0.3"/>
+<vertex x="32.3" y="0"/>
+<vertex x="33.9" y="0"/>
+<vertex x="33.9" y="0.3"/>
+<vertex x="34.5" y="0.3"/>
+<vertex x="34.5" y="0"/>
+<vertex x="35.7" y="0"/>
+<vertex x="35.7" y="0.3"/>
+<vertex x="36.3" y="0.3"/>
+<vertex x="36.3" y="0"/>
+<vertex x="36.7" y="0"/>
+<vertex x="36.7" y="0.3"/>
+<vertex x="37.3" y="0.3"/>
+<vertex x="37.3" y="0"/>
+<vertex x="37.7" y="0"/>
+<vertex x="37.7" y="0.3"/>
+<vertex x="38.3" y="0.3"/>
+<vertex x="38.3" y="0"/>
+<vertex x="39.5" y="0"/>
+</polygon>
 </package>
 <package name="SELECTOR-2-LANE-NOMUX">
-<wire x1="0" y1="-0.01" x2="12" y2="-0.01" width="0.1" layer="41"/>
-<wire x1="12" y1="-0.01" x2="12" y2="14.99" width="0.1" layer="41"/>
-<wire x1="12" y1="14.99" x2="0" y2="14.99" width="0.1" layer="41"/>
-<wire x1="0" y1="14.99" x2="0" y2="-0.01" width="0.1" layer="41"/>
 <wire x1="0" y1="-0.01" x2="12" y2="-0.01" width="0.1" layer="51"/>
 <wire x1="12" y1="-0.01" x2="12" y2="14.99" width="0.1" layer="51"/>
 <wire x1="12" y1="14.99" x2="0" y2="14.99" width="0.1" layer="51"/>
@@ -696,12 +837,30 @@
 <smd name="_VP" x="11" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="OUT" x="10" y="0" dx="0.2" dy="0.2" layer="1"/>
 <smd name="_VN" x="9" y="0" dx="0.2" dy="0.2" layer="1"/>
+<polygon width="0.2" layer="41">
+<vertex x="12" y="15"/>
+<vertex x="12" y="0"/>
+<vertex x="11.3" y="0"/>
+<vertex x="11.3" y="0.3"/>
+<vertex x="10.7" y="0.3"/>
+<vertex x="10.7" y="0"/>
+<vertex x="10.3" y="0"/>
+<vertex x="10.3" y="0.3"/>
+<vertex x="9.7" y="0.3"/>
+<vertex x="9.7" y="0"/>
+<vertex x="9.3" y="0"/>
+<vertex x="9.3" y="0.3"/>
+<vertex x="8.7" y="0.3"/>
+<vertex x="8.7" y="0"/>
+<vertex x="2.3" y="0"/>
+<vertex x="2.3" y="0.3"/>
+<vertex x="0.7" y="0.3"/>
+<vertex x="0.7" y="0"/>
+<vertex x="0" y="0"/>
+<vertex x="0" y="15"/>
+</polygon>
 </package>
 <package name="NAND">
-<wire x1="0" y1="0" x2="7" y2="0" width="0.1" layer="41"/>
-<wire x1="7" y1="0" x2="7" y2="8.5" width="0.1" layer="41"/>
-<wire x1="7" y1="8.5" x2="0" y2="8.5" width="0.1" layer="41"/>
-<wire x1="0" y1="8.5" x2="0" y2="0" width="0.1" layer="41"/>
 <wire x1="0" y1="0" x2="7" y2="0" width="0.1" layer="51"/>
 <wire x1="7" y1="0" x2="7" y2="8.5" width="0.1" layer="51"/>
 <wire x1="7" y1="8.5" x2="0" y2="8.5" width="0.1" layer="51"/>
@@ -768,6 +927,32 @@
 <wire x1="4" y1="7.3" x2="4" y2="8.2" width="0.127" layer="21"/>
 <wire x1="5" y1="7" x2="5" y2="8.2" width="0.127" layer="21"/>
 <wire x1="6" y1="7" x2="6" y2="8.2" width="0.127" layer="21"/>
+<polygon width="0.2" layer="41">
+<vertex x="0" y="8.5"/>
+<vertex x="0" y="0"/>
+<vertex x="2.7" y="0"/>
+<vertex x="2.7" y="0.3"/>
+<vertex x="3.3" y="0.3"/>
+<vertex x="3.3" y="0"/>
+<vertex x="5.7" y="0"/>
+<vertex x="5.7" y="0.3"/>
+<vertex x="6.3" y="0.3"/>
+<vertex x="6.3" y="0"/>
+<vertex x="7" y="0"/>
+<vertex x="7" y="8.5"/>
+<vertex x="6.3" y="8.5"/>
+<vertex x="6.3" y="8.2"/>
+<vertex x="5.7" y="8.2"/>
+<vertex x="5.7" y="8.5"/>
+<vertex x="5.3" y="8.5"/>
+<vertex x="5.3" y="8.2"/>
+<vertex x="4.7" y="8.2"/>
+<vertex x="4.7" y="8.5"/>
+<vertex x="4.3" y="8.5"/>
+<vertex x="4.3" y="8.2"/>
+<vertex x="3.7" y="8.2"/>
+<vertex x="3.7" y="8.5"/>
+</polygon>
 </package>
 </packages>
 </library>
@@ -1136,12 +1321,12 @@ Please make sure your boards conform to these design rules.</description>
 </designrules>
 <autorouter>
 <pass name="Default">
-<param name="RoutingGrid" value="50mil"/>
-<param name="AutoGrid" value="1"/>
-<param name="Efforts" value="0"/>
-<param name="TopRouterVariant" value="1"/>
+<param name="RoutingGrid" value="0.05mm"/>
+<param name="AutoGrid" value="0"/>
+<param name="Efforts" value="2"/>
+<param name="TopRouterVariant" value="0"/>
 <param name="tpViaShape" value="round"/>
-<param name="PrefDir.1" value="|"/>
+<param name="PrefDir.1" value="-"/>
 <param name="PrefDir.2" value="0"/>
 <param name="PrefDir.3" value="0"/>
 <param name="PrefDir.4" value="0"/>
@@ -1156,7 +1341,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="PrefDir.13" value="0"/>
 <param name="PrefDir.14" value="0"/>
 <param name="PrefDir.15" value="0"/>
-<param name="PrefDir.16" value="-"/>
+<param name="PrefDir.16" value="|"/>
 <param name="cfVia" value="8"/>
 <param name="cfNonPref" value="5"/>
 <param name="cfChangeDir" value="2"/>
@@ -1240,7 +1425,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="SEL2" library="p.peter-gator" package="SELECTOR-8_BIT-NOMUX" value="8_BIT_SELECT" x="10" y="5"/>
 <element name="SEL1" library="p.peter-gator" package="SELECTOR-2-LANE-NOMUX" value="1_BIT_SELECT" x="0.5" y="34.5"/>
 <element name="SEL3" library="p.peter-gator" package="SELECTOR-2-LANE-NOMUX" value="1_BIT_SELECT" x="12.5" y="34.5"/>
-<element name="NOT2" library="p.peter-gator" package="NOT-VERTICAL" value="NOTVERTICAL" x="9" y="0.5" rot="R90"/>
+<element name="NOT2" library="p.peter-gator" package="NOT-VERTICAL" value="NOTVERTICAL" x="9.5" y="0.5" rot="R90"/>
 <element name="NAND1" library="p.peter-gator" package="NAND" value="NAND" x="0.5" y="5"/>
 <element name="XOR4" library="p.peter-gator" package="XOR" value="XOR" x="28.5" y="19.5"/>
 <element name="CON2" library="p.peter-connectors" package="PINHEADER-100MIL-2X10-EDGE" value="GENERIC-2X10" x="28.5" y="0"/>
@@ -1300,7 +1485,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="11.5" y1="34.5" x2="15.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="1.5" y1="32" x2="11.5" y2="34.5" width="0" layer="19" extent="1-1"/>
 <wire x1="4.5" y1="13.5" x2="1.5" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="0.5" y1="3.5" x2="4.5" y2="13.5" width="0" layer="19" extent="1-1"/>
+<wire x1="1" y1="3.5" x2="4.5" y2="13.5" width="0" layer="19" extent="1-1"/>
 <wire x1="48" y1="5" x2="48.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="39.93" y1="1.27" x2="48" y2="5" width="0" layer="19" extent="1-16"/>
 </signal>
@@ -1327,7 +1512,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="13.8" y1="32" x2="21.5" y2="34.5" width="0" layer="19" extent="1-1"/>
 <wire x1="9.5" y1="34.5" x2="13.8" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="6.5" y1="13.5" x2="13.8" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="0.5" y1="2.5" x2="6.5" y2="13.5" width="0" layer="19" extent="1-1"/>
+<wire x1="1" y1="2.5" x2="6.5" y2="13.5" width="0" layer="19" extent="1-1"/>
 <wire x1="46" y1="5" x2="47.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="39.93" y1="1.27" x2="46" y2="5" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -1356,7 +1541,7 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="INV_OUT">
 <contactref element="SEL1" pad="SEL"/>
 <contactref element="NOT2" pad="A"/>
-<wire x1="9" y1="2.5" x2="2.5" y2="34.5" width="0" layer="19" extent="1-1"/>
+<wire x1="9.5" y1="2.5" x2="2.5" y2="34.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="INV_ADD">
 <contactref element="XOR1" pad="B"/>
@@ -1459,7 +1644,7 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$7">
 <contactref element="NAND1" pad="A"/>
 <contactref element="NOT2" pad="NOT"/>
-<wire x1="0.5" y1="1.5" x2="3.5" y2="5" width="0" layer="19" extent="1-1"/>
+<wire x1="1" y1="1.5" x2="3.5" y2="5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="SEL2" pad="OUT"/>
