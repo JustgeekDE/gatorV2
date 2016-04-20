@@ -9,11 +9,29 @@ from constants import LOW, HIGH, MAX_LOW, MIN_HIGH, MAX_CURRENT
 class ThreeBitSelectUnitTests(TestCase):
 
   def testNoInput(self):
-    self.expectLowOutput([0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0])
+    allLows = list(itertools.repeat(LOW, 8))
+    self.expectLowOutput(allLows, allLows)
+
+  def testShortCircuitLow(self):
+    allLows = list(itertools.repeat(LOW, 8))
+    allHighs = list(itertools.repeat(HIGH, 8))
+    circuit = self.initCircuit(allLows, allHighs)
+
+    current = circuit.getMinCurrent(self.supplyName)
+
+    self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
+
+  def testShortCircuitHigh(self):
+    allHighs = list(itertools.repeat(HIGH, 8))
+    circuit = self.initCircuit(allHighs, allHighs)
+
+    current = circuit.getMinCurrent(self.supplyName)
+
+    self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
 
   def testNormalMode(self):
     for i in range(0, 8):
-      print("Testing selector: " + str(i))
+      print("\n\tTesting selector: " + str(i)),
       self.tryAllValueCombinations(i)
 
   def tryAllValueCombinations(self, index):
