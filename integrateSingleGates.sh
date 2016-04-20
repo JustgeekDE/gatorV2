@@ -1,5 +1,6 @@
 #!/bin/sh
 
+touch build/__init__.py
 virtualenv buildEnv
 source buildEnv/bin/activate
 pip install -r requirements.txt

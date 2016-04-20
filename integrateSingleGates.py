@@ -1,12 +1,9 @@
-import os
-import sys
+import os, sys
 
 from pkg_resources import resource_string
 
-from scoville.circuit import Circuit
 from scoville.eagleSchematic import EagleSchematic
 from scoville.eagleBoard import EagleBoard
-
 
 def getSchematic(schematicFilename):
   schematicSource = resource_string('hw', schematicFilename + ".sch")
@@ -21,16 +18,17 @@ def saveResult(data, filename):
   file.write(data.toString())
   file.close()
 
+
 partReplacements = {
-                    ("XOR", "XOR") : "XOR",
-                    ("OR", "OR") : "OR",
-                    ("AND", "AND") : "AND",
-                    ("NAND", "NAND") : "NAND",
-                    ("NOT", "NOT-VERTICAL") : "NOT-A",
-                    ("NOT", "NOT-HORIZONTAL") : "NOT-B",
-                    ("1_BIT_SELECT", "SELECTOR-2-LANE-NOMUX") : "1-BitSelect",
-                    ("8_BIT_SELECT", "SELECTOR-8_BIT-NOMUX") : "3-BitSelect",
-                    }
+  ("XOR", "XOR"): "XOR",
+  ("OR", "OR"): "OR",
+  ("AND", "AND"): "AND",
+  ("NAND", "NAND"): "NAND",
+  ("NOT", "NOT-VERTICAL"): "NOT-A",
+  ("NOT", "NOT-HORIZONTAL"): "NOT-B",
+  ("1_BIT_SELECT", "SELECTOR-2-LANE-NOMUX"): "1-BitSelect",
+  ("8_BIT_SELECT", "SELECTOR-8_BIT-NOMUX"): "3-BitSelect",
+}
 
 if __name__ == '__main__':
   sys.path.insert(0, os.getcwd())
@@ -42,8 +40,8 @@ if __name__ == '__main__':
     (deviceSet, packageName) = key
     filename = partReplacements[key]
 
-    replacementSchematic = getSchematic('singleGates/'+filename)
-    replacementBoard = getBoard('singleGates/'+filename)
+    replacementSchematic = getSchematic('singleGates/' + filename)
+    replacementBoard = getBoard('singleGates/' + filename)
 
     schematic.replace(deviceSet, replacementSchematic)
     board.replaceByPackage(packageName, replacementBoard)
