@@ -1688,26 +1688,26 @@ calculated offsite</text>
 </net>
 <net name="SUM" class="0">
 <segment>
-<pinref part="OR1" gate="G$1" pin="OR"/>
-<wire x1="292.1" y1="208.28" x2="294.64" y2="208.28" width="0.1524" layer="91"/>
-<label x="294.64" y="208.28" size="3.81" layer="95" ratio="12" xref="yes"/>
-</segment>
-<segment>
 <pinref part="SEL2" gate="G$1" pin="I5"/>
 <wire x1="43.18" y1="35.56" x2="40.64" y2="35.56" width="0.1524" layer="91"/>
 <label x="40.64" y="35.56" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="CARRY_OUT" class="0">
 <segment>
 <pinref part="XOR3" gate="G$1" pin="XOR"/>
 <wire x1="241.3" y1="246.38" x2="294.64" y2="246.38" width="0.1524" layer="91"/>
 <label x="294.64" y="246.38" size="3.81" layer="95" ratio="12" xref="yes"/>
 </segment>
+</net>
+<net name="CARRY_OUT" class="0">
 <segment>
 <pinref part="CON2" gate="G$1" pin="11"/>
 <wire x1="-22.86" y1="-30.48" x2="-27.94" y2="-30.48" width="0.1524" layer="91"/>
 <label x="-27.94" y="-30.48" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="OR1" gate="G$1" pin="OR"/>
+<wire x1="292.1" y1="208.28" x2="294.64" y2="208.28" width="0.1524" layer="91"/>
+<label x="294.64" y="208.28" size="3.81" layer="95" ratio="12" xref="yes"/>
 </segment>
 </net>
 <net name="+5V" class="0">

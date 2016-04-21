@@ -1279,14 +1279,14 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="XOR3" pad="A"/>
 </signal>
 <signal name="SUM">
-<contactref element="OR1" pad="OR"/>
 <contactref element="SEL2" pad="I5"/>
-<wire x1="31" y1="5" x2="46.5" y2="32" width="0" layer="19" extent="1-1"/>
+<contactref element="XOR3" pad="XOR"/>
+<wire x1="31" y1="5" x2="25" y2="32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CARRY_OUT">
-<contactref element="XOR3" pad="XOR"/>
 <contactref element="CON2" pad="11"/>
-<wire x1="29.77" y1="1.27" x2="25" y2="32" width="0" layer="19" extent="1-16"/>
+<contactref element="OR1" pad="OR"/>
+<wire x1="29.77" y1="1.27" x2="46.5" y2="32" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="+5V">
 <contactref element="XOR1" pad="_VP"/>

@@ -1,9 +1,9 @@
 from unittest import TestCase
 from constants import LOW, HIGH, MAX_LOW, MIN_HIGH, MAX_CURRENT, INPUT_RESISTANCE
 from scoville.signal import GenericSignal, DelayedSignal
+from aluTest import ALUTest
 
-
-class AdditionTests(TestCase):
+class AdditionTests(ALUTest):
 
   def testNormalFunctions(self):
     self.addUp(LOW,  LOW,  LOW,  MAX_LOW,  MAX_LOW)
@@ -17,32 +17,19 @@ class AdditionTests(TestCase):
 
 
   def addUp(self, a, b, carryIn, expectedSum, expectedCarryOut):
-    circuit = self.getCircuit()
+    circuit = self.initCircuit()
 
+    circuit.setSignal(GenericSignal("S_ADD", HIGH))
     circuit.setSignal(GenericSignal("A", a))
     circuit.setSignal(GenericSignal("B", b))
     circuit.setSignal(GenericSignal("CARRY_IN", carryIn))
 
     circuit.inspectVoltage('SUM')
-    circuit.inspectVoltage('CARRY')
-    circuit.inspectCurrent(self.supplyName)
-
     circuit.run()
-    actualSum = circuit.getVoltage('SUM')
-    actualCarry = circuit.getVoltage('CARRY')
-    current = circuit.getMaxCurrent(self.supplyName)
 
-    comparisionFunction = self.assertLess
-    if expectedSum == MIN_HIGH:
-      comparisionFunction = self.assertGreater
-    comparisionFunction(actualSum, expectedSum, "{0} + {1} + {2} should sum to {3} (was {4})".format(a,b,carryIn, expectedSum, actualSum))
-
-    comparisionFunction = self.assertLess
-    if expectedCarryOut == MIN_HIGH:
-      comparisionFunction = self.assertGreater
-    comparisionFunction(actualCarry, expectedCarryOut, "{0} + {1} + {2} should carry to {3} (was {4})".format(a,b,carryIn, expectedCarryOut, actualCarry))
-
-    self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
+    self.expect(circuit,"SUM", expectedSum)
+    self.expect(circuit,"CARRY_OUT", expectedCarryOut)
+    self.checkCurrent(circuit)
 
 
 

@@ -31,6 +31,13 @@ class ALUTest(TestCase):
 
     return circuit
 
+  def expect(self, circuit, signalName, expectedValue):
+    if expectedValue == MAX_LOW:
+      self.expectLow(circuit,signalName)
+    else:
+      self.expectHigh(circuit,signalName)
+
+
   def expectLow(self, circuit, signalName):
     signalValue = circuit.getVoltage(signalName)
     self.assertLess(signalValue, MAX_LOW)
