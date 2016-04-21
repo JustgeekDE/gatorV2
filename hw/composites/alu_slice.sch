@@ -1987,7 +1987,7 @@ calculated offsite</text>
 <label x="40.64" y="35.56" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="CARRY" class="0">
+<net name="CARRY_OUT" class="0">
 <segment>
 <pinref part="XOR3" gate="G$1" pin="XOR"/>
 <wire x1="241.3" y1="246.38" x2="294.64" y2="246.38" width="0.1524" layer="91"/>
@@ -2193,7 +2193,7 @@ calculated offsite</text>
 <label x="15.24" y="-66.04" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="INV_ADD" class="0">
+<net name="INVERT" class="0">
 <segment>
 <pinref part="XOR1" gate="G$1" pin="B"/>
 <wire x1="-50.8" y1="193.04" x2="-53.34" y2="193.04" width="0.1524" layer="91"/>

@@ -1457,7 +1457,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="41.5" y1="34.5" x2="46.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="31" y1="5" x2="46.5" y2="32" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="CARRY">
+<signal name="CARRY_OUT">
 <contactref element="XOR3" pad="XOR"/>
 <contactref element="CON2" pad="11"/>
 <wire x1="29.77" y1="1.27" x2="25" y2="32" width="0" layer="19" extent="1-16"/>
@@ -1543,7 +1543,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="NOT2" pad="A"/>
 <wire x1="9.5" y1="2.5" x2="2.5" y2="34.5" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="INV_ADD">
+<signal name="INVERT">
 <contactref element="XOR1" pad="B"/>
 </signal>
 <signal name="LEFT_IN">
