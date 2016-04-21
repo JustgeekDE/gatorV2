@@ -27,7 +27,7 @@ class AdditionTests(ALUTest):
     circuit.inspectVoltage('SUM')
     circuit.run()
 
-    self.expect(circuit,"SUM", expectedSum)
+    self.expect(circuit,"RESULT", expectedSum)
     self.expect(circuit,"CARRY_OUT", expectedCarryOut)
     self.checkCurrent(circuit)
 
