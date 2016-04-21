@@ -6,7 +6,7 @@ from pkg_resources import resource_string
 
 from scoville.circuit import Circuit
 from scoville.eagleSchematic import EagleSchematic
-from integrationTests import test_ADD, test_ID
+from integrationTests import test_ADD, test_ID, test_AND
 
 def getCircuitFunction():
   def getCircuit(self):
@@ -31,5 +31,6 @@ if __name__ == '__main__':
 
   success = success and runTests(test_ADD.AdditionTests)
   success = success and runTests(test_ID.IdentityTests)
+  success = success and runTests(test_AND.ANDTests)
 
   sys.exit(not success)
