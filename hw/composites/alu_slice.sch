@@ -966,8 +966,8 @@
 <pin name="I1" x="-22.86" y="68.58" visible="off" length="short" swaplevel="2"/>
 <wire x1="-20.32" y1="-91.44" x2="20.32" y2="-91.44" width="0.254" layer="94"/>
 <wire x1="20.32" y1="-91.44" x2="20.32" y2="-88.9" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-88.9" x2="20.32" y2="-73.66" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-73.66" x2="20.32" y2="93.98" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-88.9" x2="20.32" y2="-76.2" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-76.2" x2="20.32" y2="93.98" width="0.254" layer="94"/>
 <wire x1="20.32" y1="93.98" x2="-20.32" y2="93.98" width="0.254" layer="94"/>
 <text x="-17.78" y="91.44" size="1.27" layer="95" ratio="12">&gt;NAME</text>
 <wire x1="-20.32" y1="78.74" x2="-5.08" y2="78.74" width="0.254" layer="94"/>
@@ -1082,8 +1082,11 @@
 <text x="-19.812" y="-73.152" size="1.27" layer="94" ratio="12">I8</text>
 <wire x1="-20.32" y1="-91.44" x2="-20.32" y2="93.98" width="0.254" layer="94"/>
 <wire x1="10.16" y1="68.58" x2="10.16" y2="-73.66" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-73.66" x2="20.32" y2="-73.66" width="0.254" layer="94"/>
-<pin name="OUT" x="22.86" y="-73.66" visible="off" length="short" rot="R180"/>
+<wire x1="10.16" y1="-73.66" x2="12.7" y2="-73.66" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-73.66" x2="15.24" y2="-73.66" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-73.66" x2="15.24" y2="-76.2" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-76.2" x2="20.32" y2="-76.2" width="0.254" layer="94"/>
+<pin name="OUT" x="22.86" y="-76.2" visible="off" length="short" rot="R180"/>
 <pin name="_VP" x="0" y="96.52" visible="off" length="short" rot="R270"/>
 <pin name="_VN" x="0" y="-93.98" visible="off" length="short" rot="R90"/>
 </symbol>
@@ -2015,8 +2018,8 @@ calculated offsite</text>
 </segment>
 <segment>
 <pinref part="SEL2" gate="G$1" pin="OUT"/>
-<wire x1="88.9" y1="-25.4" x2="93.98" y2="-25.4" width="0.1524" layer="91"/>
-<label x="93.98" y="-25.4" size="3.81" layer="95" ratio="12" xref="yes"/>
+<wire x1="88.9" y1="-27.94" x2="93.98" y2="-27.94" width="0.1524" layer="91"/>
+<label x="93.98" y="-27.94" size="3.81" layer="95" ratio="12" xref="yes"/>
 </segment>
 </net>
 </nets>
