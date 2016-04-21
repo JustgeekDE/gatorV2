@@ -12,6 +12,9 @@
       wait-for-repo)
     (with-repo
           single-gates-unit-tests
+          integrate-single-gates
+          ERC
+          integration-tests
           )
   )
 )

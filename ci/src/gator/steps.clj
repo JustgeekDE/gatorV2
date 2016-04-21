@@ -13,3 +13,12 @@
 
 (defn single-gates-unit-tests [args ctx]
   (shell/bash ctx (:cwd args) "./runTests.sh unitTestsSimulation"))
+
+(defn integrate-single-gates [args ctx]
+  (shell/bash ctx (:cwd args) "./integrateSingleGates.sh"))
+
+(defn integration-tests [args ctx]
+  (shell/bash ctx (:cwd args) "./runTests.sh integrationTestsSimulation"))
+
+(defn ERC [args ctx]
+  (shell/bash ctx (:cwd args) "./runERC.sh build/alu_slice.sch"))
