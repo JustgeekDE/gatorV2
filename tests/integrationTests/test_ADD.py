@@ -17,14 +17,12 @@ class AdditionTests(ALUTest):
 
 
   def addUp(self, a, b, carryIn, expectedSum, expectedCarryOut):
-    circuit = self.initCircuit()
+    circuit = self.initCircuit("S_ADD")
 
-    circuit.setSignal(GenericSignal("S_ADD", HIGH))
     circuit.setSignal(GenericSignal("A", a))
     circuit.setSignal(GenericSignal("B", b))
     circuit.setSignal(GenericSignal("CARRY_IN", carryIn))
 
-    circuit.inspectVoltage('SUM')
     circuit.run()
 
     self.expect(circuit,"RESULT", expectedSum)

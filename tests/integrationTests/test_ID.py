@@ -6,8 +6,8 @@ from aluTest import ALUTest
 class IdentityTests(ALUTest):
 
   def testIdentityOfLowShouldBeLow(self):
-    circuit = self.initCircuit()
-    circuit.setSignal(GenericSignal("S_ID", HIGH))
+    circuit = self.initCircuit("S_ID")
+
     circuit.setSignal(GenericSignal("A", LOW))
 
     circuit.run()
@@ -16,8 +16,8 @@ class IdentityTests(ALUTest):
     self.checkCurrent(circuit)
 
   def testIdentityOfHighShouldBeHigh(self):
-    circuit = self.initCircuit()
-    circuit.setSignal(GenericSignal("S_ID", HIGH))
+    circuit = self.initCircuit("S_ID")
+
     circuit.setSignal(GenericSignal("A", HIGH))
 
     circuit.run()
@@ -26,9 +26,8 @@ class IdentityTests(ALUTest):
     self.checkCurrent(circuit)
 
   def testInputBShouldNotChangeIdentityFromLow(self):
-    circuit = self.initCircuit()
+    circuit = self.initCircuit("S_ID")
 
-    circuit.setSignal(GenericSignal("S_ID", HIGH))
     circuit.setSignal(GenericSignal("A", LOW))
     circuit.setSignal(GenericSignal("B", HIGH))
 
@@ -38,9 +37,8 @@ class IdentityTests(ALUTest):
     self.checkCurrent(circuit)
 
   def testInputBShouldNotChangeIdentityFromHigh(self):
-    circuit = self.initCircuit()
+    circuit = self.initCircuit("S_ID")
 
-    circuit.setSignal(GenericSignal("S_ID", HIGH))
     circuit.setSignal(GenericSignal("A", HIGH))
     circuit.setSignal(GenericSignal("B", HIGH))
 

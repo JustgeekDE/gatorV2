@@ -2,13 +2,13 @@ from unittest import TestCase
 
 from scoville.signal import GenericSignal
 
-from constants import MAX_LOW, MIN_HIGH, LOW
+from constants import MAX_LOW, MIN_HIGH, LOW, HIGH
 
 
 class ALUTest(TestCase):
   MAX_CURRENT = 0.1
 
-  def initCircuit(self):
+  def initCircuit(self, selector):
     circuit = self.getCircuit()
 
     circuit.setSignal(GenericSignal("A", LOW))
@@ -24,6 +24,8 @@ class ALUTest(TestCase):
     circuit.setSignal(GenericSignal("S_SHIFT", LOW))
     circuit.setSignal(GenericSignal("S_CMP", LOW))
     circuit.setSignal(GenericSignal("S_LOAD", LOW))
+
+    circuit.setSignal(GenericSignal(selector, HIGH))
 
     circuit.inspectVoltage('RESULT')
     circuit.inspectVoltage('CARRY_OUT')
