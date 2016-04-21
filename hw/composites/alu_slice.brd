@@ -790,170 +790,6 @@
 <vertex x="39.5" y="0"/>
 </polygon>
 </package>
-<package name="SELECTOR-2-LANE-NOMUX">
-<wire x1="0" y1="-0.01" x2="12" y2="-0.01" width="0.1" layer="51"/>
-<wire x1="12" y1="-0.01" x2="12" y2="14.99" width="0.1" layer="51"/>
-<wire x1="12" y1="14.99" x2="0" y2="14.99" width="0.1" layer="51"/>
-<wire x1="0" y1="14.99" x2="0" y2="-0.01" width="0.1" layer="51"/>
-<text x="2" y="14.09" size="0.7" layer="51" font="vector" ratio="12" align="center">&gt;NAME</text>
-<wire x1="9" y1="0.3" x2="9" y2="2.6" width="0.127" layer="51"/>
-<wire x1="8.4" y1="2.6" x2="9" y2="2.6" width="0.127" layer="51"/>
-<wire x1="9" y1="2.6" x2="9.6" y2="2.6" width="0.127" layer="51"/>
-<wire x1="8.6" y1="2.8" x2="9.4" y2="2.8" width="0.127" layer="51"/>
-<wire x1="8.8" y1="3" x2="9.2" y2="3" width="0.127" layer="51"/>
-<wire x1="11" y1="0.3" x2="11" y2="2.6" width="0.127" layer="51"/>
-<wire x1="11" y1="2.6" x2="11" y2="3" width="0.127" layer="51"/>
-<wire x1="11" y1="3" x2="10.6" y2="2.6" width="0.127" layer="51"/>
-<wire x1="11" y1="3" x2="11.4" y2="2.6" width="0.127" layer="51"/>
-<wire x1="11" y1="2.6" x2="10.6" y2="2.2" width="0.127" layer="51"/>
-<wire x1="11" y1="2.6" x2="11.4" y2="2.2" width="0.127" layer="51"/>
-<wire x1="1.5" y1="0.3" x2="1.5" y2="1.4" width="0.127" layer="51"/>
-<wire x1="1.5" y1="1.4" x2="1.8" y2="1.7" width="0.127" layer="51"/>
-<wire x1="1.8" y1="1.7" x2="2.7" y2="1.7" width="0.127" layer="51"/>
-<wire x1="2.7" y1="1.7" x2="3" y2="2" width="0.127" layer="51"/>
-<wire x1="2" y1="0.3" x2="2" y2="0.7" width="0.127" layer="51"/>
-<wire x1="2" y1="0.7" x2="2.3" y2="1" width="0.127" layer="51"/>
-<wire x1="2.3" y1="1" x2="3.3" y2="1" width="0.127" layer="51"/>
-<wire x1="3.3" y1="1" x2="4.2" y2="1" width="0.127" layer="51"/>
-<wire x1="1" y1="0.3" x2="1" y2="3" width="0.127" layer="51"/>
-<wire x1="3" y1="2" x2="3" y2="7.5" width="0.127" layer="51"/>
-<wire x1="10" y1="0.3" x2="10" y2="9.5" width="0.127" layer="51"/>
-<wire x1="10" y1="9.5" x2="4" y2="9.5" width="0.127" layer="51"/>
-<wire x1="4" y1="9.5" x2="3.5" y2="9" width="0.127" layer="51"/>
-<wire x1="3.5" y1="9" x2="2.5" y2="8" width="0.127" layer="51"/>
-<wire x1="1" y1="3" x2="1" y2="13" width="0.127" layer="51"/>
-<wire x1="1" y1="13" x2="3" y2="13" width="0.127" layer="51"/>
-<wire x1="3" y1="13" x2="3" y2="11.5" width="0.127" layer="51"/>
-<wire x1="4.2" y1="1" x2="4.5" y2="1.3" width="0.127" layer="51"/>
-<wire x1="4.5" y1="1.3" x2="4.5" y2="8" width="0.127" layer="51"/>
-<wire x1="4.5" y1="8" x2="4" y2="8.5" width="0.127" layer="51"/>
-<wire x1="4" y1="8.5" x2="3.5" y2="9" width="0.127" layer="51"/>
-<circle x="3" y="7.5" radius="0.1" width="0.127" layer="51"/>
-<circle x="3" y="11.5" radius="0.1" width="0.127" layer="51"/>
-<circle x="2.5" y="8" radius="0.1" width="0.127" layer="51"/>
-<smd name="SEL" x="2" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="B" x="1.5" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="A" x="1" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="_VP" x="11" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="OUT" x="10" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="_VN" x="9" y="0" dx="0.2" dy="0.2" layer="1"/>
-<polygon width="0.2" layer="41">
-<vertex x="12" y="15"/>
-<vertex x="12" y="0"/>
-<vertex x="11.3" y="0"/>
-<vertex x="11.3" y="0.3"/>
-<vertex x="10.7" y="0.3"/>
-<vertex x="10.7" y="0"/>
-<vertex x="10.3" y="0"/>
-<vertex x="10.3" y="0.3"/>
-<vertex x="9.7" y="0.3"/>
-<vertex x="9.7" y="0"/>
-<vertex x="9.3" y="0"/>
-<vertex x="9.3" y="0.3"/>
-<vertex x="8.7" y="0.3"/>
-<vertex x="8.7" y="0"/>
-<vertex x="2.3" y="0"/>
-<vertex x="2.3" y="0.3"/>
-<vertex x="0.7" y="0.3"/>
-<vertex x="0.7" y="0"/>
-<vertex x="0" y="0"/>
-<vertex x="0" y="15"/>
-</polygon>
-</package>
-<package name="NAND">
-<wire x1="0" y1="0" x2="7" y2="0" width="0.1" layer="51"/>
-<wire x1="7" y1="0" x2="7" y2="8.5" width="0.1" layer="51"/>
-<wire x1="7" y1="8.5" x2="0" y2="8.5" width="0.1" layer="51"/>
-<wire x1="0" y1="8.5" x2="0" y2="0" width="0.1" layer="51"/>
-<wire x1="0.5" y1="4" x2="0.5" y2="5" width="0.1" layer="51"/>
-<wire x1="0.5" y1="5" x2="1.7" y2="5" width="0.1" layer="51"/>
-<wire x1="1.7" y1="5" x2="2.3" y2="5" width="0.1" layer="51"/>
-<wire x1="2.3" y1="5" x2="3" y2="5" width="0.1" layer="51"/>
-<wire x1="3" y1="5" x2="3" y2="4" width="0.1" layer="51"/>
-<wire x1="3" y1="4" x2="2.8" y2="4" width="0.1" layer="51"/>
-<wire x1="2.8" y1="4" x2="3" y2="4" width="0.1" layer="51"/>
-<wire x1="3" y1="4" x2="2.8" y2="4" width="0.1" layer="51"/>
-<wire x1="2.8" y1="4" x2="2.7" y2="4" width="0.1" layer="51"/>
-<wire x1="2.7" y1="4" x2="0.5" y2="4" width="0.1" layer="51"/>
-<wire x1="2" y1="5.5" x2="1.5" y2="5.5" width="0.2" layer="51"/>
-<rectangle x1="0.5" y1="1" x2="1.5" y2="2" layer="51"/>
-<rectangle x1="2" y1="1" x2="3" y2="2" layer="51"/>
-<rectangle x1="0.7" y1="3.2" x2="1.3" y2="4" layer="51"/>
-<rectangle x1="2.2" y1="3.2" x2="2.8" y2="4" layer="51"/>
-<text x="2" y="8" size="0.7" layer="51" font="vector" ratio="12" align="center">&gt;NAME</text>
-<rectangle x1="5.5" y1="1" x2="6.5" y2="2" layer="51"/>
-<rectangle x1="4" y1="1" x2="5" y2="2" layer="51"/>
-<rectangle x1="1.4" y1="5" x2="2.1" y2="5.9" layer="51"/>
-<wire x1="4" y1="4" x2="4" y2="5" width="0.1" layer="51"/>
-<wire x1="4" y1="5" x2="5.2" y2="5" width="0.1" layer="51"/>
-<wire x1="5.2" y1="5" x2="5.8" y2="5" width="0.1" layer="51"/>
-<wire x1="5.8" y1="5" x2="6.5" y2="5" width="0.1" layer="51"/>
-<wire x1="6.5" y1="5" x2="6.5" y2="4" width="0.1" layer="51"/>
-<wire x1="6.5" y1="4" x2="6.3" y2="4" width="0.1" layer="51"/>
-<wire x1="6.3" y1="4" x2="6.5" y2="4" width="0.1" layer="51"/>
-<wire x1="6.5" y1="4" x2="6.3" y2="4" width="0.1" layer="51"/>
-<wire x1="6.3" y1="4" x2="6.2" y2="4" width="0.1" layer="51"/>
-<wire x1="6.2" y1="4" x2="4" y2="4" width="0.1" layer="51"/>
-<wire x1="5.5" y1="5.5" x2="5" y2="5.5" width="0.2" layer="51"/>
-<rectangle x1="4.2" y1="3.2" x2="4.8" y2="4" layer="51"/>
-<rectangle x1="5.7" y1="3.2" x2="6.3" y2="4" layer="51"/>
-<rectangle x1="4.9" y1="5" x2="5.6" y2="5.9" layer="51"/>
-<rectangle x1="0.5" y1="6.5" x2="1.5" y2="7.5" layer="51"/>
-<rectangle x1="2" y1="6.5" x2="3" y2="7.5" layer="51"/>
-<wire x1="6" y1="0.3" x2="6" y2="1" width="0.127" layer="21"/>
-<wire x1="3" y1="0.3" x2="3" y2="1" width="0.127" layer="21"/>
-<wire x1="3" y1="1" x2="2.75" y2="1.25" width="0.127" layer="21"/>
-<wire x1="1" y1="2" x2="1" y2="3.25" width="0.127" layer="21"/>
-<wire x1="2.5" y1="4" x2="2.5" y2="4.25" width="0.127" layer="21"/>
-<wire x1="2.5" y1="4.25" x2="2.75" y2="4.5" width="0.127" layer="21"/>
-<wire x1="2.75" y1="4.5" x2="5" y2="4.5" width="0.127" layer="21"/>
-<wire x1="5" y1="4.5" x2="5.25" y2="4.75" width="0.127" layer="21"/>
-<wire x1="5.25" y1="4.75" x2="5.25" y2="5" width="0.127" layer="21"/>
-<wire x1="4.5" y1="2" x2="4.5" y2="3.25" width="0.127" layer="21"/>
-<wire x1="6" y1="4" x2="6" y2="7" width="0.127" layer="21"/>
-<wire x1="5" y1="7" x2="5" y2="6.75" width="0.127" layer="21"/>
-<wire x1="5" y1="6.75" x2="4.75" y2="6.5" width="0.127" layer="21"/>
-<wire x1="4.75" y1="6.5" x2="3.75" y2="5.5" width="0.127" layer="21"/>
-<wire x1="3.75" y1="5.5" x2="2" y2="5.5" width="0.127" layer="21"/>
-<wire x1="1.75" y1="5.75" x2="1.75" y2="6.25" width="0.127" layer="21"/>
-<wire x1="1.75" y1="6.25" x2="1.25" y2="6.75" width="0.127" layer="21"/>
-<wire x1="3" y1="7" x2="3.75" y2="7" width="0.127" layer="21"/>
-<wire x1="3.75" y1="7" x2="4" y2="7.25" width="0.127" layer="21"/>
-<smd name="A" x="3" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="B" x="6" y="0" dx="0.2" dy="0.2" layer="1"/>
-<smd name="_VP" x="4" y="8.5" dx="0.2" dy="0.2" layer="1"/>
-<smd name="NAND" x="5" y="8.5" dx="0.2" dy="0.2" layer="1"/>
-<smd name="_VN" x="6" y="8.5" dx="0.2" dy="0.2" layer="1"/>
-<wire x1="4" y1="7.3" x2="4" y2="8.2" width="0.127" layer="21"/>
-<wire x1="5" y1="7" x2="5" y2="8.2" width="0.127" layer="21"/>
-<wire x1="6" y1="7" x2="6" y2="8.2" width="0.127" layer="21"/>
-<polygon width="0.2" layer="41">
-<vertex x="0" y="8.5"/>
-<vertex x="0" y="0"/>
-<vertex x="2.7" y="0"/>
-<vertex x="2.7" y="0.3"/>
-<vertex x="3.3" y="0.3"/>
-<vertex x="3.3" y="0"/>
-<vertex x="5.7" y="0"/>
-<vertex x="5.7" y="0.3"/>
-<vertex x="6.3" y="0.3"/>
-<vertex x="6.3" y="0"/>
-<vertex x="7" y="0"/>
-<vertex x="7" y="8.5"/>
-<vertex x="6.3" y="8.5"/>
-<vertex x="6.3" y="8.2"/>
-<vertex x="5.7" y="8.2"/>
-<vertex x="5.7" y="8.5"/>
-<vertex x="5.3" y="8.5"/>
-<vertex x="5.3" y="8.2"/>
-<vertex x="4.7" y="8.2"/>
-<vertex x="4.7" y="8.5"/>
-<vertex x="4.3" y="8.5"/>
-<vertex x="4.3" y="8.2"/>
-<vertex x="3.7" y="8.2"/>
-<vertex x="3.7" y="8.5"/>
-</polygon>
-</package>
 </packages>
 </library>
 <library name="p.peter-connectors">
@@ -1421,23 +1257,15 @@ Please make sure your boards conform to these design rules.</description>
 <element name="XOR3" library="p.peter-gator" package="XOR" value="XOR" x="14.5" y="19.5"/>
 <element name="NOT1" library="p.peter-gator" package="NOT-VERTICAL" value="NOTVERTICAL" x="45.5" y="34.5"/>
 <element name="OR1" library="p.peter-gator" package="OR" value="OR" x="42.5" y="19.5"/>
-<element name="OR3" library="p.peter-gator" package="OR" value="OR" x="38.5" y="34.5"/>
 <element name="SEL2" library="p.peter-gator" package="SELECTOR-8_BIT-NOMUX" value="8_BIT_SELECT" x="10" y="5"/>
-<element name="SEL1" library="p.peter-gator" package="SELECTOR-2-LANE-NOMUX" value="1_BIT_SELECT" x="0.5" y="34.5"/>
-<element name="SEL3" library="p.peter-gator" package="SELECTOR-2-LANE-NOMUX" value="1_BIT_SELECT" x="12.5" y="34.5"/>
-<element name="NOT2" library="p.peter-gator" package="NOT-VERTICAL" value="NOTVERTICAL" x="9.5" y="0.5" rot="R90"/>
-<element name="NAND1" library="p.peter-gator" package="NAND" value="NAND" x="0.5" y="5"/>
-<element name="XOR4" library="p.peter-gator" package="XOR" value="XOR" x="28.5" y="19.5"/>
 <element name="CON2" library="p.peter-connectors" package="PINHEADER-100MIL-2X10-EDGE" value="GENERIC-2X10" x="28.5" y="0"/>
 </elements>
 <signals>
 <signal name="A">
 <contactref element="XOR2" pad="A"/>
 <contactref element="SEL2" pad="I4"/>
-<contactref element="SEL3" pad="B"/>
 <contactref element="CON2" pad="10"/>
-<wire x1="14" y1="34.5" x2="26" y2="47" width="0" layer="19" extent="1-1"/>
-<wire x1="26.6" y1="5" x2="14" y2="34.5" width="0" layer="19" extent="1-1"/>
+<wire x1="26.6" y1="5" x2="26" y2="47" width="0" layer="19" extent="1-1"/>
 <wire x1="27.23" y1="1.27" x2="26.6" y2="5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XOR">
@@ -1452,9 +1280,7 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="SUM">
 <contactref element="OR1" pad="OR"/>
-<contactref element="OR3" pad="A"/>
 <contactref element="SEL2" pad="I5"/>
-<wire x1="41.5" y1="34.5" x2="46.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="31" y1="5" x2="46.5" y2="32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CARRY_OUT">
@@ -1468,24 +1294,12 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="NOT1" pad="_VP"/>
 <contactref element="XOR3" pad="_VP"/>
 <contactref element="OR1" pad="_VP"/>
-<contactref element="OR3" pad="_VP"/>
 <contactref element="SEL2" pad="_VP"/>
-<contactref element="SEL1" pad="_VP"/>
-<contactref element="SEL3" pad="_VP"/>
-<contactref element="NOT2" pad="_VP"/>
-<contactref element="NAND1" pad="_VP"/>
-<contactref element="XOR4" pad="_VP"/>
 <contactref element="CON2" pad="19"/>
-<wire x1="44.5" y1="47" x2="48.5" y2="43" width="0" layer="19" extent="1-1"/>
 <wire x1="48.5" y1="32" x2="48.5" y2="43" width="0" layer="19" extent="1-1"/>
 <wire x1="37.5" y1="34.5" x2="48.5" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="29.5" y1="32" x2="37.5" y2="34.5" width="0" layer="19" extent="1-1"/>
-<wire x1="23.5" y1="34.5" x2="29.5" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="15.5" y1="32" x2="23.5" y2="34.5" width="0" layer="19" extent="1-1"/>
-<wire x1="11.5" y1="34.5" x2="15.5" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="1.5" y1="32" x2="11.5" y2="34.5" width="0" layer="19" extent="1-1"/>
-<wire x1="4.5" y1="13.5" x2="1.5" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="1" y1="3.5" x2="4.5" y2="13.5" width="0" layer="19" extent="1-1"/>
+<wire x1="15.5" y1="32" x2="37.5" y2="34.5" width="0" layer="19" extent="1-1"/>
+<wire x1="1.5" y1="32" x2="15.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="48" y1="5" x2="48.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="39.93" y1="1.27" x2="48" y2="5" width="0" layer="19" extent="1-16"/>
 </signal>
@@ -1495,24 +1309,12 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="NOT1" pad="_VN"/>
 <contactref element="XOR3" pad="_VN"/>
 <contactref element="OR1" pad="_VN"/>
-<contactref element="OR3" pad="_VN"/>
-<contactref element="SEL1" pad="_VN"/>
 <contactref element="SEL2" pad="_VN"/>
-<contactref element="SEL3" pad="_VN"/>
-<contactref element="NOT2" pad="_VN"/>
-<contactref element="NAND1" pad="_VN"/>
-<contactref element="XOR4" pad="_VN"/>
 <contactref element="CON2" pad="20"/>
-<wire x1="47.5" y1="43" x2="43.5" y2="47" width="0" layer="19" extent="1-1"/>
 <wire x1="47.5" y1="32" x2="47.5" y2="43" width="0" layer="19" extent="1-1"/>
-<wire x1="41.8" y1="32" x2="47.5" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="27.8" y1="32" x2="41.8" y2="32" width="0" layer="19" extent="1-1"/>
+<wire x1="27.8" y1="32" x2="47.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="25.2" y1="34.5" x2="27.8" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="21.5" y1="34.5" x2="25.2" y2="34.5" width="0" layer="19" extent="1-1"/>
-<wire x1="13.8" y1="32" x2="21.5" y2="34.5" width="0" layer="19" extent="1-1"/>
-<wire x1="9.5" y1="34.5" x2="13.8" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="6.5" y1="13.5" x2="13.8" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="1" y1="2.5" x2="6.5" y2="13.5" width="0" layer="19" extent="1-1"/>
+<wire x1="13.8" y1="32" x2="25.2" y2="34.5" width="0" layer="19" extent="1-1"/>
 <wire x1="46" y1="5" x2="47.5" y2="32" width="0" layer="19" extent="1-1"/>
 <wire x1="39.93" y1="1.27" x2="46" y2="5" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -1538,42 +1340,25 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="17.8" y1="5" x2="13" y2="19.5" width="0" layer="19" extent="1-1"/>
 <wire x1="19.61" y1="1.27" x2="17.8" y2="5" width="0" layer="19" extent="1-16"/>
 </signal>
-<signal name="INV_OUT">
-<contactref element="SEL1" pad="SEL"/>
-<contactref element="NOT2" pad="A"/>
-<wire x1="9.5" y1="2.5" x2="2.5" y2="34.5" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="INVERT">
 <contactref element="XOR1" pad="B"/>
 </signal>
 <signal name="LEFT_IN">
 <contactref element="SEL2" pad="I3"/>
-<contactref element="SEL1" pad="A"/>
-<contactref element="SEL3" pad="A"/>
 <contactref element="CON2" pad="7"/>
-<wire x1="1.5" y1="34.5" x2="13.5" y2="34.5" width="0" layer="19" extent="1-1"/>
-<wire x1="22.2" y1="5" x2="13.5" y2="34.5" width="0" layer="19" extent="1-1"/>
 <wire x1="24.69" y1="1.27" x2="22.2" y2="5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="EQUAL_IN">
-<contactref element="OR3" pad="B"/>
 <contactref element="CON2" pad="13"/>
-<wire x1="32.31" y1="1.27" x2="44.5" y2="34.5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="EQUAL_OUT">
-<contactref element="OR3" pad="OR"/>
 <contactref element="CON2" pad="17"/>
-<wire x1="37.39" y1="1.27" x2="42.5" y2="47" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="RIGHT_IN">
-<contactref element="SEL1" pad="B"/>
 <contactref element="CON2" pad="1"/>
-<wire x1="17.07" y1="1.27" x2="2" y2="34.5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="RIGHT_OUT">
-<contactref element="SEL3" pad="OUT"/>
 <contactref element="CON2" pad="9"/>
-<wire x1="27.23" y1="1.27" x2="22.5" y2="34.5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$6">
 <contactref element="OR1" pad="B"/>
@@ -1587,7 +1372,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="OR1" pad="A"/>
 <wire x1="15" y1="32" x2="45.5" y2="19.5" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="S_NOR">
+<signal name="S_OR">
 <contactref element="SEL2" pad="S7"/>
 <contactref element="CON2" pad="16"/>
 <wire x1="34.85" y1="1.27" x2="37.6" y2="5" width="0" layer="19" extent="1-1"/>
@@ -1604,9 +1389,7 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="S_CMP">
 <contactref element="SEL2" pad="S3"/>
-<contactref element="SEL3" pad="SEL"/>
 <contactref element="CON2" pad="6"/>
-<wire x1="20" y1="5" x2="14.5" y2="34.5" width="0" layer="19" extent="1-1"/>
 <wire x1="22.15" y1="1.27" x2="20" y2="5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="S_LOAD">
@@ -1626,38 +1409,16 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="S_SHIFT">
 <contactref element="SEL2" pad="S1"/>
-<contactref element="NAND1" pad="B"/>
 <contactref element="CON2" pad="2"/>
 <wire x1="11.2" y1="5" x2="17.07" y2="1.27" width="0" layer="19" extent="1-1"/>
-<wire x1="6.5" y1="5" x2="11.2" y2="5" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$2">
-<contactref element="SEL1" pad="OUT"/>
-<contactref element="SEL2" pad="I1"/>
-<wire x1="13.4" y1="5" x2="10.5" y2="34.5" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$1">
-<contactref element="XOR4" pad="B"/>
-<contactref element="NAND1" pad="NAND"/>
-<wire x1="5.5" y1="13.5" x2="29" y2="19.5" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$7">
-<contactref element="NAND1" pad="A"/>
-<contactref element="NOT2" pad="NOT"/>
-<wire x1="1" y1="1.5" x2="3.5" y2="5" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$3">
-<contactref element="SEL2" pad="OUT"/>
-<contactref element="XOR4" pad="A"/>
-<wire x1="47" y1="5" x2="41" y2="19.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OVERFLOW">
 <contactref element="CON2" pad="5"/>
 </signal>
 <signal name="RESULT">
-<contactref element="XOR4" pad="XOR"/>
 <contactref element="CON2" pad="15"/>
-<wire x1="34.85" y1="1.27" x2="39" y2="32" width="0" layer="19" extent="1-16"/>
+<contactref element="SEL2" pad="OUT"/>
+<wire x1="34.85" y1="1.27" x2="47" y2="5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$4">
 </signal>
