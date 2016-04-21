@@ -1346,7 +1346,9 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="LEFT_IN">
 <contactref element="SEL2" pad="I3"/>
 <contactref element="CON2" pad="7"/>
+<contactref element="SEL2" pad="I1"/>
 <wire x1="24.69" y1="1.27" x2="22.2" y2="5" width="0" layer="19" extent="1-16"/>
+<wire x1="13.4" y1="5" x2="22.2" y2="5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="EQUAL_IN">
 <contactref element="CON2" pad="13"/>

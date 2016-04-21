@@ -431,15 +431,11 @@
 <segment>
 <pinref part="Q2" gate="G$1" pin="EMITTER"/>
 <wire x1="15.24" y1="60.96" x2="15.24" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="Q4" gate="G$1" pin="EMITTER"/>
-<wire x1="12.7" y1="48.26" x2="12.7" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="60.96" x2="15.24" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="53.34" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="48.26" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="Q6" gate="G$1" pin="EMITTER"/>
 <wire x1="15.24" y1="27.94" x2="12.7" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="27.94" x2="12.7" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="48.26" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="48.26" x2="15.24" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="Q8" gate="G$1" pin="EMITTER"/>
 <wire x1="15.24" y1="7.62" x2="12.7" y2="7.62" width="0.1524" layer="91"/>
@@ -460,12 +456,10 @@
 <pinref part="Q16" gate="G$1" pin="EMITTER"/>
 <wire x1="0" y1="-91.44" x2="-15.24" y2="-91.44" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-91.44" x2="-15.24" y2="-76.2" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="-76.2" x2="7.62" y2="-76.2" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="-76.2" x2="12.7" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-76.2" x2="12.7" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="-76.2" x2="12.7" y2="-71.12" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="-53.34" x2="15.24" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="-76.2" x2="12.7" y2="-76.2" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="-76.2" x2="7.62" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="-88.9" x2="20.32" y2="-91.44" width="0.1524" layer="91"/>
 <pinref part="Q17" gate="G$1" pin="EMITTER"/>
 <wire x1="0" y1="-91.44" x2="20.32" y2="-91.44" width="0.1524" layer="91"/>
@@ -473,11 +467,14 @@
 <junction x="15.24" y="-33.02"/>
 <junction x="15.24" y="7.62"/>
 <junction x="15.24" y="27.94"/>
-<junction x="15.24" y="48.26"/>
 <junction x="15.24" y="-53.34"/>
 <junction x="0" y="-91.44"/>
 <wire x1="0" y1="-91.44" x2="0" y2="-93.98" width="0.1524" layer="91"/>
 <junction x="12.7" y="-76.2"/>
+<pinref part="Q4" gate="G$1" pin="EMITTER"/>
+<wire x1="12.7" y1="50.8" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="48.26" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
+<junction x="15.24" y="48.26"/>
 </segment>
 </net>
 <net name="_VP" class="0">

@@ -1849,6 +1849,11 @@ calculated offsite</text>
 <wire x1="-22.86" y1="-25.4" x2="-27.94" y2="-25.4" width="0.1524" layer="91"/>
 <label x="-27.94" y="-25.4" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="SEL2" gate="G$1" pin="I1"/>
+<wire x1="43.18" y1="116.84" x2="40.64" y2="116.84" width="0.1524" layer="91"/>
+<label x="40.64" y="116.84" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="EQUAL_IN" class="0">
 <segment>
@@ -2017,6 +2022,16 @@ calculated offsite</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="106,1,149.86,264.16,CARRY_IN,,,,,"/>
+<approved hash="106,1,-22.86,-33.02,EQUAL_IN,,,,,"/>
+<approved hash="106,1,-22.86,-38.1,EQUAL_OUT,,,,,"/>
+<approved hash="106,1,-50.8,193.04,INVERT,,,,,"/>
+<approved hash="106,1,-22.86,-22.86,OVERFLOW,,,,,"/>
+<approved hash="106,1,-22.86,-17.78,RIGHT_IN,,,,,"/>
+<approved hash="106,1,-22.86,-27.94,RIGHT_OUT,,,,,"/>
+<approved hash="108,1,149.86,228.6,XOR,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
