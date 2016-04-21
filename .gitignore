@@ -1,3 +1,6 @@
+### Various supporting programs
+# Open document lock
+.~lock*
 
 # Created by https://www.gitignore.io/api/linux,eagle,python
 
