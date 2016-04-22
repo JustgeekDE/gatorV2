@@ -14,7 +14,7 @@ class ALUTest(TestCase):
     circuit.setSignal(GenericSignal("A", LOW))
     circuit.setSignal(GenericSignal("B", LOW))
     circuit.setSignal(GenericSignal("CARRY_IN", LOW))
-    circuit.setSignal(GenericSignal("INVERT", LOW))
+    circuit.setSignal(GenericSignal("INVERT_OUT", LOW))
 
     circuit.setSignal(GenericSignal("S_ID", LOW))
     circuit.setSignal(GenericSignal("S_AND", LOW))

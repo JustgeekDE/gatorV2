@@ -6,46 +6,46 @@ from aluTest import ALUTest
 class ANDTests(ALUTest):
 
   def testLowAndLow(self):
-    circuit = self.initCircuit("S_AND")
-
-    circuit.setSignal(GenericSignal("A", LOW))
-    circuit.setSignal(GenericSignal("B", LOW))
-
-    circuit.run()
-
+    circuit = self.runCircuit(LOW, LOW)
     self.expectLow(circuit,"RESULT")
-    self.checkCurrent(circuit)
 
   def testLowAndHigh(self):
-    circuit = self.initCircuit("S_AND")
-
-    circuit.setSignal(GenericSignal("A", LOW))
-    circuit.setSignal(GenericSignal("B", HIGH))
-
-    circuit.run()
-
+    circuit = self.runCircuit(LOW, HIGH)
     self.expectLow(circuit,"RESULT")
-    self.checkCurrent(circuit)
 
   def testHighAndLow(self):
     circuit = self.initCircuit("S_AND")
-
-    circuit.setSignal(GenericSignal("A", HIGH))
-    circuit.setSignal(GenericSignal("B", LOW))
-
-    circuit.run()
-
+    circuit = self.runCircuit(HIGH, LOW)
     self.expectLow(circuit,"RESULT")
-    self.checkCurrent(circuit)
 
   def testHighAndHigh(self):
-    circuit = self.initCircuit("S_AND")
+    circuit = self.runCircuit(HIGH, HIGH)
+    self.expectHigh(circuit,"RESULT")
 
-    circuit.setSignal(GenericSignal("A", HIGH))
-    circuit.setSignal(GenericSignal("B", HIGH))
+  def testLowAndLowInverted(self):
+    circuit = self.runCircuit(LOW, LOW, HIGH)
+    self.expectHigh(circuit,"RESULT")
+
+  def testLowAndHighInverted(self):
+    circuit = self.runCircuit(LOW, HIGH, HIGH)
+    self.expectHigh(circuit,"RESULT")
+
+  def testHighAndLowInverted(self):
+    circuit = self.initCircuit("S_AND")
+    circuit = self.runCircuit(HIGH, LOW, HIGH)
+    self.expectHigh(circuit,"RESULT")
+
+  def testHighAndHighInverted(self):
+    circuit = self.runCircuit(HIGH, HIGH, HIGH)
+    self.expectLow(circuit,"RESULT")
+
+  def runCircuit(self, a, b, invert=LOW):
+    circuit = self.initCircuit("S_AND")
+    circuit.setSignal(GenericSignal("A", a))
+    circuit.setSignal(GenericSignal("B", b))
+    circuit.setSignal(GenericSignal("INVERT_OUT", invert))
 
     circuit.run()
 
-    self.expectHigh(circuit,"RESULT")
     self.checkCurrent(circuit)
-
+    return circuit
