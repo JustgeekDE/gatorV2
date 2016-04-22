@@ -1395,6 +1395,9 @@
 <part name="XOR1" library="p.peter-gator" deviceset="XOR" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
+<part name="XOR4" library="p.peter-gator" deviceset="XOR" device=""/>
+<part name="P+3" library="supply1" deviceset="+5V" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1455,10 +1458,13 @@ calculated offsite</text>
 <instance part="GND3" gate="1" x="66.04" y="-50.8"/>
 <instance part="CON2" gate="G$1" x="-20.32" y="-27.94"/>
 <instance part="GND8" gate="1" x="-10.16" y="-45.72"/>
-<instance part="P+8" gate="1" x="-43.18" y="-35.56"/>
+<instance part="P+8" gate="1" x="-7.62" y="-10.16"/>
 <instance part="XOR1" gate="G$1" x="139.7" y="-45.72"/>
 <instance part="GND1" gate="1" x="129.54" y="-81.28"/>
 <instance part="P+1" gate="1" x="129.54" y="-10.16"/>
+<instance part="XOR4" gate="G$1" x="-2.54" y="210.82"/>
+<instance part="P+3" gate="1" x="-12.7" y="246.38"/>
+<instance part="GND2" gate="1" x="-12.7" y="175.26"/>
 </instances>
 <busses>
 </busses>
@@ -1559,15 +1565,20 @@ calculated offsite</text>
 <wire x1="66.04" y1="147.32" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="CON2" gate="G$1" pin="19"/>
+<pinref part="CON2" gate="G$1" pin="2"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
-<wire x1="-22.86" y1="-40.64" x2="-43.18" y2="-40.64" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="-40.64" x2="-43.18" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-17.78" x2="-7.62" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="-17.78" x2="-7.62" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="XOR1" gate="G$1" pin="_VP"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
 <wire x1="129.54" y1="-12.7" x2="129.54" y2="-15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="XOR4" gate="G$1" pin="_VP"/>
+<pinref part="P+3" gate="1" pin="+5V"/>
+<wire x1="-12.7" y1="243.84" x2="-12.7" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1602,6 +1613,11 @@ calculated offsite</text>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="129.54" y1="-78.74" x2="129.54" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="XOR4" gate="G$1" pin="_VN"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="-12.7" y1="177.8" x2="-12.7" y2="180.34" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="NOR" class="0">
 <segment>
@@ -1617,9 +1633,9 @@ calculated offsite</text>
 </net>
 <net name="B" class="0">
 <segment>
-<wire x1="43.18" y1="210.82" x2="-53.34" y2="228.6" width="0.1524" layer="91"/>
 <label x="-53.34" y="228.6" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
-<pinref part="XOR2" gate="G$1" pin="B"/>
+<pinref part="XOR4" gate="G$1" pin="A"/>
+<wire x1="-50.8" y1="228.6" x2="-53.34" y2="228.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SEL2" gate="G$1" pin="I2"/>
@@ -1691,9 +1707,9 @@ calculated offsite</text>
 <label x="40.64" y="45.72" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="CON2" gate="G$1" pin="6"/>
-<wire x1="-15.24" y1="-22.86" x2="-10.16" y2="-22.86" width="0.1524" layer="91"/>
-<label x="-10.16" y="-22.86" size="1.27" layer="95" ratio="9" xref="yes"/>
+<pinref part="CON2" gate="G$1" pin="8"/>
+<wire x1="-15.24" y1="-25.4" x2="-10.16" y2="-25.4" width="0.1524" layer="91"/>
+<label x="-10.16" y="-25.4" size="1.27" layer="95" ratio="9" xref="yes"/>
 </segment>
 </net>
 <net name="S_CMP" class="0">
@@ -1717,9 +1733,9 @@ calculated offsite</text>
 <label x="40.64" y="66.04" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="CON2" gate="G$1" pin="2"/>
-<wire x1="-15.24" y1="-17.78" x2="-10.16" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-10.16" y="-17.78" size="1.27" layer="95" ratio="9" xref="yes"/>
+<pinref part="CON2" gate="G$1" pin="4"/>
+<wire x1="-15.24" y1="-20.32" x2="-10.16" y2="-20.32" width="0.1524" layer="91"/>
+<label x="-10.16" y="-20.32" size="1.27" layer="95" ratio="9" xref="yes"/>
 </segment>
 </net>
 <net name="S_AND" class="0">
@@ -1729,9 +1745,9 @@ calculated offsite</text>
 <label x="40.64" y="-15.24" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="CON2" gate="G$1" pin="4"/>
-<wire x1="-15.24" y1="-20.32" x2="-10.16" y2="-20.32" width="0.1524" layer="91"/>
-<label x="-10.16" y="-20.32" size="1.27" layer="95" ratio="9" xref="yes"/>
+<pinref part="CON2" gate="G$1" pin="6"/>
+<wire x1="-15.24" y1="-22.86" x2="-10.16" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-10.16" y="-22.86" size="1.27" layer="95" ratio="9" xref="yes"/>
 </segment>
 </net>
 <net name="S_SHIFT" class="0">
@@ -1743,9 +1759,9 @@ calculated offsite</text>
 </net>
 <net name="RESULT" class="0">
 <segment>
-<pinref part="CON2" gate="G$1" pin="15"/>
-<wire x1="-22.86" y1="-35.56" x2="-27.94" y2="-35.56" width="0.1524" layer="91"/>
-<label x="-27.94" y="-35.56" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
+<pinref part="CON2" gate="G$1" pin="19"/>
+<wire x1="-22.86" y1="-40.64" x2="-27.94" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-27.94" y="-40.64" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="XOR1" gate="G$1" pin="XOR"/>
@@ -1754,11 +1770,6 @@ calculated offsite</text>
 </segment>
 </net>
 <net name="NC" class="0">
-<segment>
-<pinref part="CON2" gate="G$1" pin="9"/>
-<wire x1="-22.86" y1="-27.94" x2="-27.94" y2="-27.94" width="0.1524" layer="91"/>
-<label x="-27.94" y="-27.94" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="CON2" gate="G$1" pin="11"/>
 <wire x1="-22.86" y1="-30.48" x2="-27.94" y2="-30.48" width="0.1524" layer="91"/>
@@ -1770,9 +1781,9 @@ calculated offsite</text>
 <label x="-27.94" y="-33.02" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="CON2" gate="G$1" pin="8"/>
-<wire x1="-15.24" y1="-25.4" x2="-10.16" y2="-25.4" width="0.1524" layer="91"/>
-<label x="-10.16" y="-25.4" size="1.27" layer="95" ratio="9" xref="yes"/>
+<pinref part="CON2" gate="G$1" pin="15"/>
+<wire x1="-22.86" y1="-35.56" x2="-27.94" y2="-35.56" width="0.1524" layer="91"/>
+<label x="-27.94" y="-35.56" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CON2" gate="G$1" pin="10"/>
@@ -1817,6 +1828,25 @@ calculated offsite</text>
 <pinref part="SEL2" gate="G$1" pin="OUT"/>
 <pinref part="XOR1" gate="G$1" pin="A"/>
 <wire x1="88.9" y1="-27.94" x2="91.44" y2="-27.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="XOR2" gate="G$1" pin="B"/>
+<pinref part="XOR4" gate="G$1" pin="XOR"/>
+<wire x1="40.64" y1="210.82" x2="43.18" y2="210.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SUBTRACT" class="0">
+<segment>
+<pinref part="XOR4" gate="G$1" pin="B"/>
+<wire x1="-50.8" y1="193.04" x2="-53.34" y2="193.04" width="0.1524" layer="91"/>
+<label x="-53.34" y="193.04" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="9"/>
+<wire x1="-22.86" y1="-27.94" x2="-27.94" y2="-27.94" width="0.1524" layer="91"/>
+<label x="-27.94" y="-27.94" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
