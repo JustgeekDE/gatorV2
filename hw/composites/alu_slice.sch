@@ -1161,32 +1161,36 @@
 <wire x1="-2.54" y1="-10.16" x2="-2.54" y2="-6.604" width="0.254" layer="94"/>
 </symbol>
 <symbol name="SELECTOR-2_LANES-MUXED">
-<pin name="A" x="-33.02" y="27.94" visible="off" length="short" swaplevel="1"/>
-<pin name="B" x="-33.02" y="-5.08" visible="off" length="short" swaplevel="1"/>
-<pin name="SEL" x="-33.02" y="33.02" visible="off" length="short" swaplevel="2"/>
-<pin name="OUT" x="27.94" y="-22.86" visible="off" length="short" rot="R180"/>
-<text x="22.86" y="32.512" size="1.27" layer="95" ratio="12" rot="R180">&gt;NAME</text>
-<wire x1="-30.48" y1="-27.94" x2="25.4" y2="-27.94" width="0.254" layer="94"/>
-<wire x1="25.4" y1="-27.94" x2="25.4" y2="35.56" width="0.254" layer="94"/>
-<wire x1="25.4" y1="35.56" x2="-30.48" y2="35.56" width="0.254" layer="94"/>
-<wire x1="-30.48" y1="35.56" x2="-30.48" y2="-27.94" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="33.02" x2="-2.54" y2="27.94" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="27.94" x2="-2.54" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="33.02" x2="-30.48" y2="33.02" width="0.254" layer="94"/>
-<wire x1="-30.48" y1="27.94" x2="-27.94" y2="27.94" width="0.254" layer="94"/>
-<wire x1="-27.94" y1="27.94" x2="-27.94" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-27.94" y1="10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-30.48" y1="-5.08" x2="-12.7" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="-15.24" y2="6.35" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="12.7" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="17.78" y2="2.54" width="0.254" layer="94"/>
-<wire x1="17.78" y1="2.54" x2="17.78" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="17.78" y1="-22.86" x2="25.4" y2="-22.86" width="0.254" layer="94"/>
-<circle x="-12.7" y="10.16" radius="1.27" width="0" layer="94"/>
-<circle x="-12.7" y="-5.08" radius="1.27" width="0" layer="94"/>
-<circle x="7.62" y="2.54" radius="1.27" width="0" layer="94"/>
-<pin name="_VP" x="-5.08" y="38.1" visible="off" length="short" rot="R270"/>
-<pin name="_VN" x="-5.08" y="-30.48" visible="off" length="short" rot="R90"/>
+<pin name="A" x="-30.48" y="22.86" visible="off" length="short" swaplevel="1"/>
+<pin name="B" x="-30.48" y="-10.16" visible="off" length="short" swaplevel="1"/>
+<pin name="SEL" x="-30.48" y="27.94" visible="off" length="short" swaplevel="2"/>
+<pin name="OUT" x="30.48" y="-25.4" visible="off" length="short" rot="R180"/>
+<text x="25.4" y="27.432" size="1.27" layer="95" ratio="12" rot="R180">&gt;NAME</text>
+<wire x1="-27.94" y1="-30.48" x2="27.94" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="27.94" y1="-30.48" x2="27.94" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="27.94" y1="-25.4" x2="27.94" y2="30.48" width="0.254" layer="94"/>
+<wire x1="27.94" y1="30.48" x2="-27.94" y2="30.48" width="0.254" layer="94"/>
+<wire x1="-27.94" y1="30.48" x2="-27.94" y2="27.94" width="0.254" layer="94"/>
+<wire x1="-27.94" y1="27.94" x2="-27.94" y2="22.86" width="0.254" layer="94"/>
+<wire x1="-27.94" y1="22.86" x2="-27.94" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-27.94" y1="-10.16" x2="-27.94" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="0" y1="27.94" x2="0" y2="25.4" width="0.254" layer="94"/>
+<wire x1="0" y1="25.4" x2="0" y2="10.16" width="0.254" layer="94"/>
+<wire x1="0" y1="27.94" x2="-27.94" y2="27.94" width="0.254" layer="94"/>
+<wire x1="-27.94" y1="22.86" x2="-25.4" y2="22.86" width="0.254" layer="94"/>
+<wire x1="-25.4" y1="22.86" x2="-25.4" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-25.4" y1="5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-27.94" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-12.7" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="20.32" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-5.08" x2="20.32" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-25.4" x2="27.94" y2="-25.4" width="0.254" layer="94"/>
+<circle x="-10.16" y="5.08" radius="1.27" width="0" layer="94"/>
+<circle x="-10.16" y="-10.16" radius="1.27" width="0" layer="94"/>
+<circle x="10.16" y="-5.08" radius="1.27" width="0" layer="94"/>
+<pin name="_VP" x="-2.54" y="33.02" visible="off" length="short" rot="R270"/>
+<pin name="_VN" x="-2.54" y="-33.02" visible="off" length="short" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1764,9 +1768,9 @@ calculated offsite</text>
 <instance part="NOT1" gate="G$1" x="20.32" y="-5.08"/>
 <instance part="GND4" gate="1" x="17.78" y="-22.86"/>
 <instance part="P+4" gate="1" x="17.78" y="12.7"/>
-<instance part="SEL1" gate="G$1" x="-22.86" y="109.22"/>
-<instance part="GND5" gate="1" x="-27.94" y="73.66"/>
-<instance part="P+5" gate="1" x="-27.94" y="152.4"/>
+<instance part="SEL1" gate="G$1" x="-25.4" y="114.3"/>
+<instance part="GND5" gate="1" x="-27.94" y="76.2"/>
+<instance part="P+5" gate="1" x="-27.94" y="154.94"/>
 </instances>
 <busses>
 </busses>
@@ -1822,8 +1826,8 @@ calculated offsite</text>
 </segment>
 <segment>
 <pinref part="SEL1" gate="G$1" pin="B"/>
-<wire x1="-55.88" y1="104.14" x2="-60.96" y2="104.14" width="0.1524" layer="91"/>
-<label x="-60.96" y="104.14" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
+<wire x1="-55.88" y1="104.14" x2="-58.42" y2="104.14" width="0.1524" layer="91"/>
+<label x="-58.42" y="104.14" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SUM" class="0">
@@ -1895,7 +1899,7 @@ calculated offsite</text>
 <segment>
 <pinref part="SEL1" gate="G$1" pin="_VP"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
-<wire x1="-27.94" y1="149.86" x2="-27.94" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="152.4" x2="-27.94" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1943,7 +1947,7 @@ calculated offsite</text>
 <segment>
 <pinref part="SEL1" gate="G$1" pin="_VN"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="-27.94" y1="76.2" x2="-27.94" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="81.28" x2="-27.94" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NOR" class="0">
@@ -2193,10 +2197,10 @@ calculated offsite</text>
 <net name="N$5" class="0">
 <segment>
 <pinref part="SEL2" gate="G$1" pin="I1"/>
-<wire x1="43.18" y1="116.84" x2="7.62" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="116.84" x2="7.62" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="116.84" x2="10.16" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="116.84" x2="10.16" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="SEL1" gate="G$1" pin="OUT"/>
-<wire x1="7.62" y1="86.36" x2="5.08" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="88.9" x2="5.08" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
