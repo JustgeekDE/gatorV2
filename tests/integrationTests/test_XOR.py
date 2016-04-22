@@ -3,7 +3,7 @@ from constants import LOW, HIGH, MAX_LOW, MIN_HIGH, MAX_CURRENT, INPUT_RESISTANC
 from scoville.signal import GenericSignal, DelayedSignal
 from aluTest import ALUTest
 
-class ORTests(ALUTest):
+class XORTests(ALUTest):
 
   def testLowAndLow(self):
     circuit = self.runCircuit(LOW, LOW)
@@ -20,7 +20,7 @@ class ORTests(ALUTest):
 
   def testHighAndHigh(self):
     circuit = self.runCircuit(HIGH, HIGH)
-    self.expectHigh(circuit,"RESULT")
+    self.expectLow(circuit,"RESULT")
 
   def testLowAndLowInverted(self):
     circuit = self.runCircuit(LOW, LOW, HIGH)
@@ -37,10 +37,10 @@ class ORTests(ALUTest):
 
   def testHighAndHighInverted(self):
     circuit = self.runCircuit(HIGH, HIGH, HIGH)
-    self.expectLow(circuit,"RESULT")
+    self.expectHigh(circuit,"RESULT")
 
   def runCircuit(self, a, b, invert=LOW):
-    circuit = self.initCircuit("S_OR")
+    circuit = self.initCircuit("S_XOR")
     circuit.setSignal(GenericSignal("A", a))
     circuit.setSignal(GenericSignal("B", b))
     circuit.setSignal(GenericSignal("INVERT_OUT", invert))
