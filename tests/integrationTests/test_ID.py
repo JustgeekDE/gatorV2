@@ -6,44 +6,34 @@ from aluTest import ALUTest
 class IdentityTests(ALUTest):
 
   def testIdentityOfLowShouldBeLow(self):
-    circuit = self.initCircuit("S_ID")
-
-    circuit.setSignal(GenericSignal("A", LOW))
-
-    circuit.run()
-
+    circuit = self.runCircuit(LOW)
     self.expectLow(circuit,"RESULT")
-    self.checkCurrent(circuit)
 
   def testIdentityOfHighShouldBeHigh(self):
-    circuit = self.initCircuit("S_ID")
-
-    circuit.setSignal(GenericSignal("A", HIGH))
-
-    circuit.run()
-
+    circuit = self.runCircuit(HIGH)
     self.expectHigh(circuit,"RESULT")
-    self.checkCurrent(circuit)
+
+  def testInvertedIdentityOfLowShouldBeHigh(self):
+    circuit = self.runCircuit(LOW, invert=HIGH)
+    self.expectHigh(circuit,"RESULT")
+
+  def testInvertedIdentityOfHighShouldBeLow(self):
+    circuit = self.runCircuit(HIGH, invert=HIGH)
+    self.expectLow(circuit,"RESULT")
 
   def testInputBShouldNotChangeIdentityFromLow(self):
-    circuit = self.initCircuit("S_ID")
-
-    circuit.setSignal(GenericSignal("A", LOW))
-    circuit.setSignal(GenericSignal("B", HIGH))
-
-    circuit.run()
-
+    circuit = self.runCircuit(LOW, b=HIGH)
     self.expectLow(circuit,"RESULT")
-    self.checkCurrent(circuit)
 
   def testInputBShouldNotChangeIdentityFromHigh(self):
-    circuit = self.initCircuit("S_ID")
-
-    circuit.setSignal(GenericSignal("A", HIGH))
-    circuit.setSignal(GenericSignal("B", HIGH))
-
-    circuit.run()
-
+    circuit = self.runCircuit(HIGH, b=HIGH)
     self.expectHigh(circuit,"RESULT")
-    self.checkCurrent(circuit)
 
+  def runCircuit(self, a, b=LOW, invert=LOW):
+    circuit = self.initCircuit("S_ID")
+    circuit.setSignal(GenericSignal('A', a))
+    circuit.setSignal(GenericSignal('B', b))
+    circuit.setSignal(GenericSignal('INVERT_OUT', invert))
+    circuit.run()
+    self.checkCurrent(circuit)
+    return circuit
