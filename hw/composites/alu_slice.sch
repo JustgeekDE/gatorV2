@@ -1822,8 +1822,8 @@ calculated offsite</text>
 </segment>
 <segment>
 <pinref part="SEL1" gate="G$1" pin="B"/>
-<wire x1="-55.88" y1="104.14" x2="-58.42" y2="137.16" width="0.1524" layer="91"/>
-<label x="-58.42" y="137.16" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
+<wire x1="-55.88" y1="104.14" x2="-60.96" y2="104.14" width="0.1524" layer="91"/>
+<label x="-60.96" y="104.14" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SUM" class="0">
@@ -2186,8 +2186,8 @@ calculated offsite</text>
 </segment>
 <segment>
 <pinref part="SEL1" gate="G$1" pin="A"/>
-<wire x1="-55.88" y1="137.16" x2="-58.42" y2="104.14" width="0.1524" layer="91"/>
-<label x="-58.42" y="104.14" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
+<wire x1="-55.88" y1="137.16" x2="-58.42" y2="137.16" width="0.1524" layer="91"/>
+<label x="-58.42" y="137.16" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -2203,11 +2203,9 @@ calculated offsite</text>
 </sheet>
 </sheets>
 <errors>
+<approved hash="106,1,43.18,76.2,LEFT_IN,,,,,"/>
 <approved hash="106,1,43.18,86.36,S_CMP,,,,,"/>
 <approved hash="106,1,43.18,106.68,S_LOAD,,,,,"/>
-<approved hash="106,1,43.18,5.08,S_OR,,,,,"/>
-<approved hash="106,1,43.18,127,S_SHIFT,,,,,"/>
-<approved hash="106,1,43.18,25.4,S_XOR,,,,,"/>
 <approved hash="108,1,149.86,228.6,XOR,,,,,"/>
 </errors>
 </schematic>
