@@ -1712,21 +1712,6 @@ A nor /B = Less</text>
 - all output carry
 - all output equal state
 only difference in backplane</text>
-<text x="220.98" y="-91.44" size="2.54" layer="97" ratio="12">Inputs:
-- A
-- B
-- Left in
-- Right in
-- Equal
-
-Outputs:
-- Result
-- Left out
-- Right out
-- Carry
-- Overflow
-- Equal
-</text>
 <text x="251.46" y="-58.42" size="2.54" layer="97" ratio="12">COMPARE:
 
 Subtract A - B
@@ -1742,6 +1727,9 @@ NOR
 NOT(A) NAND NOT(B) NAND sum
 
 calculated offsite</text>
+<text x="111.76" y="139.7" size="2.54" layer="97" ratio="12">INVERT_OUT only set for first 4 Instructions
+Subtract == Invert_out for addition
+</text>
 </plain>
 <instances>
 <instance part="XOR2" gate="G$1" x="91.44" y="228.6"/>
@@ -1793,6 +1781,11 @@ calculated offsite</text>
 <wire x1="-53.34" y1="-45.72" x2="-58.42" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-58.42" y="-45.72" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="SEL2" gate="G$1" pin="I3"/>
+<wire x1="43.18" y1="76.2" x2="40.64" y2="76.2" width="0.1524" layer="91"/>
+<label x="40.64" y="76.2" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="XOR" class="0">
 <segment>
@@ -1823,11 +1816,6 @@ calculated offsite</text>
 <pinref part="CON2" gate="G$1" pin="5"/>
 <wire x1="-53.34" y1="-50.8" x2="-58.42" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-58.42" y="-50.8" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="SEL1" gate="G$1" pin="B"/>
-<wire x1="-55.88" y1="104.14" x2="-58.42" y2="104.14" width="0.1524" layer="91"/>
-<label x="-58.42" y="104.14" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SUM" class="0">
@@ -1979,13 +1967,6 @@ calculated offsite</text>
 <label x="-58.42" y="-48.26" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="LEFT_IN" class="0">
-<segment>
-<pinref part="SEL2" gate="G$1" pin="I3"/>
-<wire x1="43.18" y1="76.2" x2="40.64" y2="76.2" width="0.1524" layer="91"/>
-<label x="40.64" y="76.2" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="AND" class="0">
 <segment>
 <pinref part="OR1" gate="G$1" pin="B"/>
@@ -2112,11 +2093,6 @@ calculated offsite</text>
 </net>
 <net name="NC" class="0">
 <segment>
-<pinref part="CON2" gate="G$1" pin="13"/>
-<wire x1="-53.34" y1="-60.96" x2="-58.42" y2="-60.96" width="0.1524" layer="91"/>
-<label x="-58.42" y="-60.96" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="CON2" gate="G$1" pin="15"/>
 <wire x1="-53.34" y1="-63.5" x2="-58.42" y2="-63.5" width="0.1524" layer="91"/>
 <label x="-58.42" y="-63.5" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
@@ -2182,18 +2158,6 @@ calculated offsite</text>
 <wire x1="40.64" y1="-5.08" x2="43.18" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="RIGHT_IN" class="0">
-<segment>
-<pinref part="CON2" gate="G$1" pin="11"/>
-<wire x1="-53.34" y1="-58.42" x2="-58.42" y2="-58.42" width="0.1524" layer="91"/>
-<label x="-58.42" y="-58.42" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="SEL1" gate="G$1" pin="A"/>
-<wire x1="-55.88" y1="137.16" x2="-58.42" y2="137.16" width="0.1524" layer="91"/>
-<label x="-58.42" y="137.16" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="SEL2" gate="G$1" pin="I1"/>
@@ -2201,6 +2165,30 @@ calculated offsite</text>
 <wire x1="10.16" y1="116.84" x2="10.16" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="SEL1" gate="G$1" pin="OUT"/>
 <wire x1="10.16" y1="88.9" x2="5.08" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="RIGHT_A" class="0">
+<segment>
+<pinref part="SEL1" gate="G$1" pin="A"/>
+<wire x1="-55.88" y1="137.16" x2="-58.42" y2="137.16" width="0.1524" layer="91"/>
+<label x="-58.42" y="137.16" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="13"/>
+<wire x1="-53.34" y1="-60.96" x2="-58.42" y2="-60.96" width="0.1524" layer="91"/>
+<label x="-58.42" y="-60.96" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="LEFT_A" class="0">
+<segment>
+<pinref part="SEL1" gate="G$1" pin="B"/>
+<wire x1="-55.88" y1="104.14" x2="-58.42" y2="104.14" width="0.1524" layer="91"/>
+<label x="-58.42" y="104.14" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="11"/>
+<wire x1="-53.34" y1="-58.42" x2="-58.42" y2="-58.42" width="0.1524" layer="91"/>
+<label x="-58.42" y="-58.42" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

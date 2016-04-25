@@ -1337,8 +1337,10 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="XOR2" pad="A"/>
 <contactref element="SEL2" pad="I4"/>
 <contactref element="CON2" pad="1"/>
+<contactref element="SEL2" pad="I3"/>
 <wire x1="26.6" y1="5" x2="26" y2="47" width="0" layer="19" extent="1-1"/>
-<wire x1="17.07" y1="1.27" x2="26.6" y2="5" width="0" layer="19" extent="1-16"/>
+<wire x1="22.2" y1="5" x2="26.6" y2="5" width="0" layer="19" extent="1-1"/>
+<wire x1="17.07" y1="1.27" x2="22.2" y2="5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="XOR">
 <contactref element="XOR3" pad="B"/>
@@ -1350,9 +1352,7 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="CARRY_IN">
 <contactref element="XOR3" pad="A"/>
 <contactref element="CON2" pad="5"/>
-<contactref element="SEL1" pad="B"/>
 <wire x1="22.15" y1="1.27" x2="27" y2="19.5" width="0" layer="19" extent="1-16"/>
-<wire x1="-11.5" y1="-6.5" x2="22.15" y2="1.27" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="SUM">
 <contactref element="SEL2" pad="I5"/>
@@ -1414,9 +1414,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="19.61" y1="1.27" x2="41.5" y2="19" width="0" layer="19" extent="1-16"/>
 <wire x1="17.8" y1="5" x2="19.61" y2="1.27" width="0" layer="19" extent="1-16"/>
 </signal>
-<signal name="LEFT_IN">
-<contactref element="SEL2" pad="I3"/>
-</signal>
 <signal name="AND">
 <contactref element="OR1" pad="B"/>
 <contactref element="XOR2" pad="AND"/>
@@ -1473,13 +1470,11 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$4">
 </signal>
 <signal name="NC">
-<contactref element="CON2" pad="13"/>
 <contactref element="CON2" pad="15"/>
 <contactref element="CON2" pad="16"/>
 <contactref element="CON2" pad="18"/>
 <wire x1="34.85" y1="1.27" x2="37.39" y2="1.27" width="0" layer="19" extent="1-16"/>
 <wire x1="34.85" y1="1.27" x2="34.85" y2="1.27" width="0" layer="19" extent="1-16"/>
-<wire x1="32.31" y1="1.27" x2="34.85" y2="1.27" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="INVERT_OUT">
 <contactref element="CON2" pad="7"/>
@@ -1508,15 +1503,20 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="NOT1" pad="NOT"/>
 <wire x1="11" y1="43" x2="39.8" y2="5" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RIGHT_IN">
-<contactref element="CON2" pad="11"/>
-<contactref element="SEL1" pad="A"/>
-<wire x1="-12" y1="-6.5" x2="29.77" y2="1.27" width="0" layer="19" extent="1-16"/>
-</signal>
 <signal name="N$5">
 <contactref element="SEL2" pad="I1"/>
 <contactref element="SEL1" pad="OUT"/>
 <wire x1="-3" y1="-6.5" x2="13.4" y2="5" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="RIGHT_A">
+<contactref element="SEL1" pad="A"/>
+<contactref element="CON2" pad="13"/>
+<wire x1="-12" y1="-6.5" x2="32.31" y2="1.27" width="0" layer="19" extent="1-16"/>
+</signal>
+<signal name="LEFT_A">
+<contactref element="SEL1" pad="B"/>
+<contactref element="CON2" pad="11"/>
+<wire x1="-11.5" y1="-6.5" x2="29.77" y2="1.27" width="0" layer="19" extent="1-16"/>
 </signal>
 </signals>
 <errors>

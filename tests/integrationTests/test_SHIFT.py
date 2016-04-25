@@ -26,8 +26,8 @@ class ShiftTests(ALUTest):
         circuit.setSignal(GenericSignal('B', b))
 
         circuit.setSignal(GenericSignal('SUBTRACT', shiftDirection))
-        circuit.setSignal(GenericSignal('CARRY_IN', leftIn))
-        circuit.setSignal(GenericSignal('RIGHT_IN', rightIn))
+        circuit.setSignal(GenericSignal('LEFT_A', leftIn))
+        circuit.setSignal(GenericSignal('RIGHT_A', rightIn))
 
         circuit.run()
         self.checkCurrent(circuit)
