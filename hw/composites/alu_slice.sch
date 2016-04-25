@@ -2063,6 +2063,11 @@ Subtract == Invert_out for addition
 <wire x1="43.18" y1="106.68" x2="38.1" y2="106.68" width="0.1524" layer="91"/>
 <label x="38.1" y="106.68" size="3.81" layer="95" ratio="11" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="16"/>
+<wire x1="-45.72" y1="-63.5" x2="-40.64" y2="-63.5" width="0.1524" layer="91"/>
+<label x="-40.64" y="-63.5" size="1.27" layer="95" ratio="9" xref="yes"/>
+</segment>
 </net>
 <net name="S_ID" class="0">
 <segment>
@@ -2110,13 +2115,6 @@ Subtract == Invert_out for addition
 <pinref part="XOR1" gate="G$1" pin="XOR"/>
 <wire x1="182.88" y1="-45.72" x2="185.42" y2="-45.72" width="0.1524" layer="91"/>
 <label x="185.42" y="-45.72" size="3.81" layer="95" ratio="12" xref="yes"/>
-</segment>
-</net>
-<net name="NC" class="0">
-<segment>
-<pinref part="CON2" gate="G$1" pin="16"/>
-<wire x1="-45.72" y1="-63.5" x2="-40.64" y2="-63.5" width="0.1524" layer="91"/>
-<label x="-40.64" y="-63.5" size="1.27" layer="95" ratio="9" xref="yes"/>
 </segment>
 </net>
 <net name="INVERT_OUT" class="0">

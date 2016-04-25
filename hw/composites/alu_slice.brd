@@ -1453,6 +1453,8 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="S_LOAD">
 <contactref element="SEL2" pad="S2"/>
+<contactref element="CON2" pad="16"/>
+<wire x1="5.6" y1="3.5" x2="31.35" y2="1.27" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="S_ID">
 <contactref element="SEL2" pad="S4"/>
@@ -1475,9 +1477,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="11.5" y1="29.5" x2="33.89" y2="1.27" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$4">
-</signal>
-<signal name="NC">
-<contactref element="CON2" pad="16"/>
 </signal>
 <signal name="INVERT_OUT">
 <contactref element="CON2" pad="7"/>
