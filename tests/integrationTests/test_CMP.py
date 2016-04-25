@@ -21,11 +21,34 @@ class ComparisionTests(ALUTest):
     circuit = self.runCircuit(HIGH, b=HIGH)
     self.expectHigh(circuit,"RESULT")
 
-  def runCircuit(self, a, b=LOW, invert=LOW):
+  def testLowAndLowAreEqual(self):
+    circuit = self.runCircuit(a = LOW, b = LOW)
+    self.expectLow(circuit,"_EQUAL_OUT")
+
+  def testHighAndHighAreEqual(self):
+    circuit = self.runCircuit(a = HIGH, b = HIGH)
+    self.expectLow(circuit,"_EQUAL_OUT")
+
+  def testHighAndLowAreNotEqual(self):
+    circuit = self.runCircuit(a = HIGH, b = LOW)
+    self.expectHigh(circuit,"_EQUAL_OUT")
+
+  def testLowAndHighAreNotEqual(self):
+    circuit = self.runCircuit(a = LOW, b = HIGH)
+    self.expectHigh(circuit,"_EQUAL_OUT")
+
+  def testFailIfPreviousCompareFailed(self):
+    circuit = self.runCircuit(a = LOW, b = LOW, equal_in=HIGH)
+    self.expectHigh(circuit,"_EQUAL_OUT")
+
+  def runCircuit(self, a, b=LOW, invert=LOW, equal_in = LOW):
     circuit = self.initCircuit("S_CMP")
+    circuit.setSignal(GenericSignal('SUBTRACT', HIGH))
+    circuit.setSignal(GenericSignal('CARRY_IN', HIGH))
     circuit.setSignal(GenericSignal('A', a))
     circuit.setSignal(GenericSignal('B', b))
     circuit.setSignal(GenericSignal('INVERT_OUT', invert))
+    circuit.setSignal(GenericSignal('_EQUAL_IN', equal_in))
     circuit.run()
     self.checkCurrent(circuit)
     return circuit

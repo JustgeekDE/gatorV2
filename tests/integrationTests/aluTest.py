@@ -31,6 +31,7 @@ class ALUTest(TestCase):
 
     circuit.inspectVoltage('RESULT')
     circuit.inspectVoltage('CARRY_OUT')
+    circuit.inspectVoltage('_EQUAL_OUT')
     circuit.inspectCurrent(self.supplyName)
 
     return circuit

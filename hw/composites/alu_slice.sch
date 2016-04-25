@@ -1011,7 +1011,7 @@
 <wire x1="-25.4" y1="12.7" x2="-17.272" y2="12.7" width="0.254" layer="94"/>
 <wire x1="-25.4" y1="-12.7" x2="-17.272" y2="-12.7" width="0.254" layer="94"/>
 <wire x1="15.24" y1="0" x2="17.78" y2="0" width="0.254" layer="94"/>
-<pin name="_VP" x="-12.7" y="27.94" visible="pad" length="middle" rot="R270"/>
+<pin name="_VP" x="-12.7" y="27.94" visible="off" length="middle" rot="R270"/>
 <pin name="_VN" x="-12.7" y="-27.94" visible="off" length="middle" rot="R90"/>
 </symbol>
 <symbol name="SELECTOR-8_BIT-NOMUX">
@@ -1698,6 +1698,9 @@
 <part name="SEL1" library="p.peter-gator" deviceset="1_BIT_SELECT" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
+<part name="OR2" library="p.peter-gator" deviceset="OR" device=""/>
+<part name="P+6" library="supply1" deviceset="+5V" device=""/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1759,6 +1762,9 @@ Subtract == Invert_out for addition
 <instance part="SEL1" gate="G$1" x="-25.4" y="114.3"/>
 <instance part="GND5" gate="1" x="-27.94" y="76.2"/>
 <instance part="P+5" gate="1" x="-27.94" y="154.94"/>
+<instance part="OR2" gate="G$1" x="312.42" y="259.08"/>
+<instance part="P+6" gate="1" x="299.72" y="292.1"/>
+<instance part="GND6" gate="1" x="299.72" y="226.06"/>
 </instances>
 <busses>
 </busses>
@@ -1826,8 +1832,13 @@ Subtract == Invert_out for addition
 </segment>
 <segment>
 <pinref part="XOR3" gate="G$1" pin="XOR"/>
-<wire x1="241.3" y1="246.38" x2="294.64" y2="246.38" width="0.1524" layer="91"/>
-<label x="294.64" y="246.38" size="3.81" layer="95" ratio="12" xref="yes"/>
+<wire x1="241.3" y1="246.38" x2="243.84" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="246.38" x2="243.84" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="251.46" x2="246.38" y2="251.46" width="0.1524" layer="91"/>
+<label x="246.38" y="251.46" size="3.81" layer="95" ratio="12" xref="yes"/>
+<pinref part="OR2" gate="G$1" pin="B"/>
+<wire x1="243.84" y1="246.38" x2="284.48" y2="246.38" width="0.1524" layer="91"/>
+<junction x="243.84" y="246.38"/>
 </segment>
 </net>
 <net name="CARRY_OUT" class="0">
@@ -1889,6 +1900,11 @@ Subtract == Invert_out for addition
 <pinref part="P+5" gate="1" pin="+5V"/>
 <wire x1="-27.94" y1="152.4" x2="-27.94" y2="147.32" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="OR2" gate="G$1" pin="_VP"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
+<wire x1="299.72" y1="289.56" x2="299.72" y2="287.02" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -1936,6 +1952,11 @@ Subtract == Invert_out for addition
 <pinref part="SEL1" gate="G$1" pin="_VN"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="-27.94" y1="81.28" x2="-27.94" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="OR2" gate="G$1" pin="_VN"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="299.72" y1="228.6" x2="299.72" y2="231.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NOR" class="0">
@@ -2081,9 +2102,9 @@ Subtract == Invert_out for addition
 </net>
 <net name="RESULT" class="0">
 <segment>
-<pinref part="CON2" gate="G$1" pin="19"/>
-<wire x1="-53.34" y1="-68.58" x2="-58.42" y2="-68.58" width="0.1524" layer="91"/>
-<label x="-58.42" y="-68.58" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
+<pinref part="CON2" gate="G$1" pin="18"/>
+<wire x1="-45.72" y1="-66.04" x2="-40.64" y2="-66.04" width="0.1524" layer="91"/>
+<label x="-40.64" y="-66.04" size="1.27" layer="95" ratio="9" xref="yes"/>
 </segment>
 <segment>
 <pinref part="XOR1" gate="G$1" pin="XOR"/>
@@ -2093,19 +2114,9 @@ Subtract == Invert_out for addition
 </net>
 <net name="NC" class="0">
 <segment>
-<pinref part="CON2" gate="G$1" pin="15"/>
-<wire x1="-53.34" y1="-63.5" x2="-58.42" y2="-63.5" width="0.1524" layer="91"/>
-<label x="-58.42" y="-63.5" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="CON2" gate="G$1" pin="16"/>
 <wire x1="-45.72" y1="-63.5" x2="-40.64" y2="-63.5" width="0.1524" layer="91"/>
 <label x="-40.64" y="-63.5" size="1.27" layer="95" ratio="9" xref="yes"/>
-</segment>
-<segment>
-<pinref part="CON2" gate="G$1" pin="18"/>
-<wire x1="-45.72" y1="-66.04" x2="-40.64" y2="-66.04" width="0.1524" layer="91"/>
-<label x="-40.64" y="-66.04" size="1.27" layer="95" ratio="9" xref="yes"/>
 </segment>
 </net>
 <net name="INVERT_OUT" class="0">
@@ -2189,6 +2200,30 @@ Subtract == Invert_out for addition
 <pinref part="CON2" gate="G$1" pin="11"/>
 <wire x1="-53.34" y1="-58.42" x2="-58.42" y2="-58.42" width="0.1524" layer="91"/>
 <label x="-58.42" y="-58.42" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="_EQUAL_IN" class="0">
+<segment>
+<pinref part="OR2" gate="G$1" pin="A"/>
+<wire x1="284.48" y1="271.78" x2="281.94" y2="271.78" width="0.1524" layer="91"/>
+<label x="281.94" y="271.78" size="3.81" layer="95" ratio="12" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="15"/>
+<wire x1="-53.34" y1="-63.5" x2="-58.42" y2="-63.5" width="0.1524" layer="91"/>
+<label x="-58.42" y="-63.5" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="_EQUAL_OUT" class="0">
+<segment>
+<pinref part="OR2" gate="G$1" pin="OR"/>
+<wire x1="335.28" y1="259.08" x2="332.74" y2="259.08" width="0.1524" layer="91"/>
+<label x="335.28" y="259.08" size="3.81" layer="95" ratio="12" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="19"/>
+<wire x1="-53.34" y1="-68.58" x2="-58.42" y2="-68.58" width="0.1524" layer="91"/>
+<label x="-58.42" y="-68.58" size="1.27" layer="95" ratio="9" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
