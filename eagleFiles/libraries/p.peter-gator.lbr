@@ -1444,7 +1444,7 @@
 <wire x1="-25.4" y1="12.7" x2="-17.272" y2="12.7" width="0.254" layer="94"/>
 <wire x1="-25.4" y1="-12.7" x2="-17.272" y2="-12.7" width="0.254" layer="94"/>
 <wire x1="15.24" y1="0" x2="17.78" y2="0" width="0.254" layer="94"/>
-<pin name="_VP" x="-12.7" y="27.94" visible="pad" length="middle" rot="R270"/>
+<pin name="_VP" x="-12.7" y="27.94" visible="off" length="middle" rot="R270"/>
 <pin name="_VN" x="-12.7" y="-27.94" visible="off" length="middle" rot="R90"/>
 </symbol>
 <symbol name="NOR">
@@ -1938,6 +1938,23 @@
 <connect gate="G$1" pin="S8" pad="S8"/>
 <connect gate="G$1" pin="_VN" pad="_VN"/>
 <connect gate="G$1" pin="_VP" pad="_VP"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="NOR">
+<gates>
+<gate name="G$1" symbol="NOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="NOR">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="OUT" pad="OUT1"/>
 </connects>
 <technologies>
 <technology name=""/>
