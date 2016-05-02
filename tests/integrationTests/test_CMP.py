@@ -42,7 +42,7 @@ class ComparisionTests(ALUTest):
     self.expectHigh(circuit,"_EQUAL_OUT")
 
   def runCircuit(self, a, b=LOW, invert=LOW, equal_in = LOW):
-    circuit = self.initCircuit("S_CMP")
+    circuit = self.initCircuit("S_ID")
     circuit.setSignal(GenericSignal('SUBTRACT', HIGH))
     circuit.setSignal(GenericSignal('CARRY_IN', HIGH))
     circuit.setSignal(GenericSignal('A', a))

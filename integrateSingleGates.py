@@ -28,6 +28,7 @@ partReplacements = {
   ("NOT", "NOT-HORIZONTAL"): "NOT-B",
   ("1_BIT_SELECT", "SELECTOR-2-LANE-NOMUX"): "1-BitSelect",
   ("8_BIT_SELECT", "SELECTOR-8_BIT-NOMUX"): "3-BitSelect",
+  ("7_VAL_SELECT", "SELECTOR-7_BIT-NOMUX"): "7-InputSelect",
 }
 
 if __name__ == '__main__':
