@@ -28,17 +28,21 @@ class AllInputTest(TestCase):
     total = len(allCombinations)
     i = 0
     startTime = time.time()
-    maxCurrent = 0
+    overallMaxCurrent = 0
+    sessionMaxCurrent = 0
     print("\n {:>6} / {} : ".format(i, total)),
     for signals in allCombinations:
       i += 1
       if i % 32 == 0:
         print(self.getTimeForecast(i, total, startTime)),
-        print(" {0:.0f} mA".format(maxCurrent*1000)),
+        print(" {0:.2f} mA / {0:.2f} mA ".format(overallMaxCurrent*1000, sessionMaxCurrent*1000)),
         print("\n {:>6} / {} : ".format(i, total)),
+        sessionMaxCurrent = 0
       current = self.runConfiguration(signals)
-      if current > maxCurrent:
-        maxCurrent = current
+      if current > overallMaxCurrent:
+        overallMaxCurrent = current
+      if current > sessionMaxCurrent:
+        sessionMaxCurrent = current
 
   def runConfiguration(self, signals):
     print('.'),
