@@ -1,5 +1,5 @@
 from unittest import TestCase
-import itertools
+import itertools, time, datetime
 
 from scoville.signal import GenericSignal
 
@@ -10,7 +10,11 @@ class AllInputTest(TestCase):
   MAX_CURRENT = 0.1
 
   def getAllCombinations(self):
-    signals = ['A', 'B', 'CARRY_IN', 'INVERT_OUT', 'SUBTRACT', 'LEFT_A', 'RIGHT_A', '_EQUAL_IN', 'S_ID', 'S_AND', 'S_OR', 'S_XOR', 'S_XOR', 'S_SHIFT', 'S_LOAD', 'S_CMP']
+    inputs = ['A', 'B', 'LEFT_A', 'RIGHT_A', '_EQUAL_IN', 'CARRY_IN']
+    modifiers = [ 'INVERT_OUT', 'SUBTRACT']
+    operations = ['S_ID', 'S_AND', 'S_OR', 'S_XOR', 'S_XOR', 'S_SHIFT', 'S_LOAD']
+
+    signals = inputs + modifiers + operations
     combinations = itertools.product([LOW, HIGH], repeat=len(signals))
     def f((a, b)): return (a,b)
     def g(x): return map(f, zip(signals, x))
@@ -20,8 +24,20 @@ class AllInputTest(TestCase):
 
   def testAllInputCombinations(self):
     allCombinations = self.getAllCombinations()
+
+    total = len(allCombinations)
+    i = 0
+    startTime = time.time()
+    maxCurrent = 0
     for signals in allCombinations:
-      self.runConfiguration(signals)
+      i += 1
+      if i % 32 == 0:
+        print(self.getTimeForecast(i, total, startTime)),
+        print(" {0:.0f} mA".format(maxCurrent*1000)),
+        print("\n {} / {} : ".format(i, total)),
+      current = self.runConfiguration(signals)
+      if current > maxCurrent:
+        maxCurrent = current
 
   def runConfiguration(self, signals):
     print('.'),
@@ -34,3 +50,10 @@ class AllInputTest(TestCase):
 
     current = circuit.getMaxCurrent(self.supplyName)
     self.assertLess(current, self.MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, self.MAX_CURRENT))
+    return current
+
+  def getTimeForecast(self, currentCount, total, startTime):
+    elapsed = time.time() - startTime
+    remaining = (total / currentCount) * elapsed
+    timeString = " {} / {}".format(datetime.timedelta(seconds=int(elapsed)), datetime.timedelta(seconds=int(remaining)))
+    return timeString
