@@ -1,6 +1,7 @@
 ### Various supporting programs
 # Open document lock
 .~lock*
+.DS_Store
 
 # Created by https://www.gitignore.io/api/linux,eagle,python
 
