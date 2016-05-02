@@ -29,12 +29,13 @@ class AllInputTest(TestCase):
     i = 0
     startTime = time.time()
     maxCurrent = 0
+    print("\n {:>6} / {} : ".format(i, total)),
     for signals in allCombinations:
       i += 1
       if i % 32 == 0:
         print(self.getTimeForecast(i, total, startTime)),
         print(" {0:.0f} mA".format(maxCurrent*1000)),
-        print("\n {} / {} : ".format(i, total)),
+        print("\n {:>6} / {} : ".format(i, total)),
       current = self.runConfiguration(signals)
       if current > maxCurrent:
         maxCurrent = current
