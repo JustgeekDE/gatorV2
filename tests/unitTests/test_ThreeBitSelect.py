@@ -29,7 +29,7 @@ class ThreeBitSelectUnitTests(TestCase):
 
     self.assertLess(current, MAX_CURRENT, "The gate used {0} ampere (max {1}).".format(current, MAX_CURRENT))
 
-  def testNormalMode(self):
+  def NormalMode(self):
     for i in range(0, 8):
       print("\n\tTesting selector: " + str(i)),
       self.tryAllValueCombinations(i)
