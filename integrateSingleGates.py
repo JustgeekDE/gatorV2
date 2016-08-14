@@ -29,6 +29,7 @@ partReplacements = {
   ("1_BIT_SELECT", "SELECTOR-2-LANE-NOMUX"): "1-BitSelect",
   ("8_BIT_SELECT", "SELECTOR-8_BIT-NOMUX"): "3-BitSelect",
   ("7_VAL_SELECT", "SELECTOR-7_BIT-NOMUX"): "7-InputSelect",
+  ("LEDDRIVER", "LEDDRIVER"): "LEDWithDriver",
 }
 
 if __name__ == '__main__':
@@ -41,8 +42,8 @@ if __name__ == '__main__':
     (deviceSet, packageName) = key
     filename = partReplacements[key]
 
-    replacementSchematic = getSchematic('singleGates/' + filename)
-    replacementBoard = getBoard('singleGates/' + filename)
+    replacementSchematic = getSchematic('singleGates/minimal/' + filename)
+    replacementBoard = getBoard('singleGates/minimal/' + filename)
 
     schematic.replace(deviceSet, replacementSchematic)
     board.replaceByPackage(packageName, replacementBoard)

@@ -327,6 +327,59 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="p.peter-rcl">
+<packages>
+<package name="R0603-MARK">
+<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
+<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<text x="0" y="1.6" size="0.8" layer="25" font="vector" ratio="12" rot="SR0" align="center">&gt;NAME</text>
+<text x="0" y="-1.6" size="0.8" layer="27" font="vector" ratio="12" rot="SR0" align="center">&gt;VALUE</text>
+<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
+<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+<wire x1="-0.4" y1="0.73" x2="0.4" y2="0.73" width="0.15" layer="21"/>
+<wire x1="-0.4" y1="-0.73" x2="0.4" y2="-0.73" width="0.15" layer="21"/>
+<wire x1="0" y1="0.4" x2="0" y2="-0.4" width="0.35" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="R-EU-MARK">
+<wire x1="-2.54" y1="-0.889" x2="2.54" y2="-0.889" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-0.889" x2="2.54" y2="0.889" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" align="top-left">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<text x="2.54" y="0" size="0.762" layer="94" align="bottom-right">*</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="R-EU-MARKED" prefix="R" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="R-EU-MARK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="R0603" package="R0603-MARK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -339,7 +392,7 @@
 <parts>
 <part name="R2" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R3" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
-<part name="R1" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="1k"/>
+<part name="R1" library="p.peter-rcl" deviceset="R-EU-MARKED" device="R0603" value="1k"/>
 <part name="R4" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R5" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R6" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
@@ -353,7 +406,7 @@
 <part name="R14" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R15" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R18" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="10k"/>
-<part name="R19" library="p.peter-gator" deviceset="R-EU_" device="R0603" value="1k"/>
+<part name="R19" library="p.peter-rcl" deviceset="R-EU-MARKED" device="R0603" value="1k"/>
 <part name="Q1" library="p.peter-gator" deviceset="TRANSISTOR-NPN-GENERIC" device="-SOT23-BEC" technology="DEFAULT" value="BC817"/>
 <part name="Q2" library="p.peter-gator" deviceset="TRANSISTOR-NPN-GENERIC" device="-SOT23-BEC" technology="DEFAULT" value="BC817"/>
 <part name="Q3" library="p.peter-gator" deviceset="TRANSISTOR-NPN-GENERIC" device="-SOT23-BEC" technology="DEFAULT" value="BC817"/>

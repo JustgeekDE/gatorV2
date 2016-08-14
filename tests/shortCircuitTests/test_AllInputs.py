@@ -24,6 +24,7 @@ class AllInputTest(TestCase):
 
   def testAllInputCombinations(self):
     allCombinations = self.getAllCombinations()
+    allCombinations.reverse()
 
     total = len(allCombinations)
     i = 0
